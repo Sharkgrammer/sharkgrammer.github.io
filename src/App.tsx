@@ -17,19 +17,18 @@ function App() {
                 <h2>This page is still under construction</h2>
                 <h2>But thanks for visiting! See some of my other hosted projects below!</h2>
 
-                <div className="grid grid-cols-2">
-                    <TempDisplay />
-                    <TempDisplay />
-                    <TempDisplay />
+                <div className="grid grid-cols-2 p-2 gap-2">
+
+                    <TempDisplay title="Quantum Poem" url="https://sharkgrammer.github.io/Quantum-Poem/" desc="A simple tribute to Outer Wilds in react. The poem changes when you refresh or click the page." />
+                    <TempDisplay title="Samaritan" url="https://sharkgrammer.github.io/Samaritan/" desc="A Person of Interest Samaritan inspired ChatGPT web interface" />
+                    <TempDisplay title="Stacker" url="https://sharkgrammer.github.io/Stacker/" desc="Just like the arcade machine. Except in Vue.js with some added settings and (hopefully) pizzazz" />
+
                 </div>
 
             </div>
 
 
         </div>
-
-
-
 
         <Footer />
 
