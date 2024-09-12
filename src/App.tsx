@@ -22,7 +22,12 @@ function App() {
                     <TempDisplay title="Quantum Poem" url="https://sharkgrammer.github.io/Quantum-Poem/" desc="A simple tribute to Outer Wilds in react. The poem changes when you refresh or click the page." />
                     <TempDisplay title="Samaritan" url="https://sharkgrammer.github.io/Samaritan/" desc="A Person of Interest Samaritan inspired ChatGPT web interface" />
                     <TempDisplay title="Stacker" url="https://sharkgrammer.github.io/Stacker/" desc="Just like the arcade machine. Except in Vue.js with some added settings and (hopefully) pizzazz" />
+                    <TempDisplay title="GitHub Stats" url="https://sharkgrammer.github.io/Lightweight-GitHub-Stats" desc="My verson of the test site my GitHub stats module creates" />
+                </div>
 
+                <div className="pt-2">
+                    <h2 className="text-lg">Also, my stats thing is pretty neat</h2>
+                    <img className="p-1" src="https://sharkgrammer.github.io/Lightweight-GitHub-Stats/data.png" />
                 </div>
 
             </div>
