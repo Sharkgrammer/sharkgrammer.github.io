@@ -5,7 +5,7 @@ import Sites from "./assets/data/sites.json";
 import Watches from "./assets/data/watchfaces.json";
 import SiteDisplay from "./components/site/SiteDisplay.tsx";
 import WatchDisplay from "./components/watch/WatchDisplay.tsx";
-
+import test from "./assets/img/watch/clockface.png";
 function App() {
 
     console.log(Watches);
@@ -16,6 +16,10 @@ function App() {
             <Navbar/>
 
             <div className="flex w-full h-[calc(100dvh)] justify-center">
+
+                <div className="p-2">
+                    <img src={test} />
+                </div>
 
                 <div className="text-center">
                     <div className="grid grid-cols-2 gap-2">
