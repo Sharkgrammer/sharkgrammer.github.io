@@ -1,23 +1,65 @@
+import {ChartBarIcon, StarIcon} from "@heroicons/react/24/outline";
+import GitHubIcon from "../../assets/img/github.svg";
+
 interface tempProps {
     title: string;
+    ratings: number;
+    img: string;
     url: string;
-    desc: string;
+    giturl: string;
+    gitstars: string;
 }
 
-function WatchDisplay({title, url, desc}: tempProps) {
+function WatchDisplay({title, ratings, img, url, giturl, gitstars}: tempProps) {
 
-    function openPage(){
+    function openPage() {
         window.open(url);
     }
 
     return (
-        <div className="px-2 py-4 border rounded-2xl shadow cursor-pointer bg-gray-50 border-gray-300 hover:bg-red-50 hover:border-red-200" onClick={openPage}>
+        <div className="card cursor-pointer overflow-hidden grid grid-cols-2" onClick={openPage}>
 
-            <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
-
-            <div className="flex justify-center w-full">
-                <p className="px-2 w-52">{desc}</p>
+            <div className="flex w-full h-full justify-center items-center">
+                <img className="w-40" src={img}/>
             </div>
+
+            <div className="grid [grid-template-areas:'stack'] bg-black text-white">
+
+                <div className="flex justify-center items-center [grid-area:stack]">
+                    <h1 className="w-40 text-2xl font-bold">{title}</h1>
+                </div>
+
+                <div className="flex items-end w-full h-full [grid-area:stack] pb-1">
+
+                    <div className="grid grid-cols-2 w-full px-2 items-center">
+                        <div className="">
+                            {giturl && (
+                                <img className="w-10 text-red-500" src={GitHubIcon}/>
+                            )}
+                        </div>
+
+                        <div className="flex items-end justify-end gap-2">
+
+                            {gitstars && (
+                                <div>
+                                    <StarIcon className="w-10"/>
+                                    <p>{gitstars}</p>
+                                </div>
+                            )}
+
+                            <div>
+                                <ChartBarIcon className="w-10"/>
+                                <p>{ratings}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
     )
 }
