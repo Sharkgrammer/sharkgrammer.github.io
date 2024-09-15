@@ -1,13 +1,10 @@
 import './App.css'
 import Navbar from "./components/nav/Navbar.tsx";
 import Footer from "./components/nav/Footer.tsx";
-import TempDisplay from "./components/temp/TempDisplay.tsx";
 import Sites from "./assets/data/sites.json";
 import SiteDisplay from "./components/site/SiteDisplay.tsx";
 
 function App() {
-
-    console.log(Sites);
 
     return (
         <div>
@@ -24,25 +21,9 @@ function App() {
                     <div className="grid grid-cols-2 gap-2">
                         {Sites.map(site => (
                             <div>
-
-                                <SiteDisplay title={site.title} url={site.url} desc={site.desc} img={site.img} />
-
+                                <SiteDisplay title={site.title} url={site.url} desc={site.desc} img={site.img}/>
                             </div>
                         ))}
-                    </div>
-
-                    <div className="grid grid-cols-2 p-2 gap-2">
-
-
-                        <TempDisplay title="Quantum Poem" url="https://sharkgrammer.github.io/Quantum-Poem/"
-                                     desc="A tribute to Outer Wilds in react. The poem changes when you refresh or click the page."/>
-                        <TempDisplay title="Samaritan" url="https://sharkgrammer.github.io/Samaritan/"
-                                     desc="A Person of Interest Samaritan inspired ChatGPT web interface"/>
-                        <TempDisplay title="Stacker" url="https://sharkgrammer.github.io/Stacker/"
-                                     desc="Just like the arcade machine. Except in Vue.js with some added settings and (hopefully) pizzazz"/>
-                        <TempDisplay title="GitHub Stats" url="https://sharkgrammer.github.io/Lightweight-GitHub-Stats"
-                                     desc="My verson of the test site my GitHub stats module creates"/>
-
                     </div>
 
                     <div className="pt-2">
