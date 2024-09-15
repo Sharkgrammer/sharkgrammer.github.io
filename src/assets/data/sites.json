@@ -3,28 +3,24 @@
     "title": "Stacker",
     "desc": "A vue.js version of the popular arcade machine. Now with extra customization!",
     "img": "/src/assets/img/site/stacker.png",
-    "url": "Stacker",
-    "dark": true
+    "url": "Stacker"
   },
   {
     "title": "Quantum Poem",
     "desc": "A tribute to Outer Wilds in react. The poem changes when you refresh or click the page.",
     "img": "/src/assets/img/site/ow.png",
-    "url": "Quantum-Poem",
-    "dark": true
+    "url": "Quantum-Poem"
   },
   {
     "title": "SamaritanGPT",
     "desc": "A Person of Interest Samaritan inspired ChatGPT web interface",
     "img": "/src/assets/img/site/sam.png",
-    "url": "Samaritan",
-    "dark": true
+    "url": "Samaritan"
   },
   {
     "title": "GitHub Stats",
-    "desc": "My version of the test site my GitHub stats module creates",
+    "desc": "My personal version of the test site my GitHub Stats program creates",
     "img": "/src/assets/img/site/stats.png",
-    "url": "Lightweight-GitHub-Stats",
-    "dark": true
+    "url": "Lightweight-GitHub-Stats"
   }
 ]

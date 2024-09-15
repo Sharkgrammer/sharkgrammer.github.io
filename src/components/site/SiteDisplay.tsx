@@ -44,7 +44,7 @@ function SiteDisplay({title, url, desc, img}: tempProps) {
 
                     {display && (
                         <div
-                            className="flex items-center justify-center bg-gray-500 opacity-90 animate-slide-up-op">
+                            className="flex items-center justify-center bg-black opacity-80 animate-slide-up-op">
                             <h1 className="text-white px-4 font-bold">{desc}</h1>
                         </div>
                     )}
