@@ -1,11 +1,11 @@
-import Wave from "../../assets/img/wave-bot.svg";
+import Wave from "../util/Wave.tsx";
 
 function Navbar() {
 
     return (
         <div>
             <div className="bg-cyan h-10 w-full"/>
-            <img src={Wave} className="wave"/>
+            <Wave top={false}/>
         </div>
     )
 }

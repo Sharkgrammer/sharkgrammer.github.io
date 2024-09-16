@@ -1,10 +1,10 @@
-import Wave from "../../assets/img/wave-top.svg";
+import Wave from "../util/Wave.tsx";
 
 function Footer() {
 
     return (
         <div>
-            <img src={Wave} className="wave"/>
+            <Wave top={true}/>
             <div className="bg-cyan h-10 w-full"/>
         </div>
     )
