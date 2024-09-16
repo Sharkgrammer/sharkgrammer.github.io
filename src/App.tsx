@@ -5,7 +5,7 @@ import Sites from "./assets/data/sites.json";
 import Watches from "./assets/data/watchfaces.json";
 import SiteDisplay from "./components/site/SiteDisplay.tsx";
 import WatchDisplay from "./components/watch/WatchDisplay.tsx";
-import test from "./assets/img/watch/clockface.png";
+
 function App() {
 
     console.log(Watches);
@@ -17,11 +17,7 @@ function App() {
 
             <div className="flex w-full h-[calc(100dvh)] justify-center">
 
-                <div className="p-2">
-                    <img src={test} />
-                </div>
-
-                <div className="text-center">
+                <div className="text-center py-1">
                     <div className="grid grid-cols-2 gap-2">
                         {Watches.map((face, index) => (
                             <div key={index}>
