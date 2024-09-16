@@ -15,14 +15,14 @@ function App() {
 
             <Navbar/>
 
-            <div className="flex w-full h-[calc(100dvh)] justify-center">
+            <div className="flex w-full h-[calc(100dvh)] justify-center px-2">
 
-                <div className="text-center py-1">
-                    <div className="grid grid-cols-2 gap-2">
+                <div className="py-1">
+                    <div className="grid gap-2 rid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
                         {Watches.map((face, index) => (
                             <div key={index}>
                                 <WatchDisplay title={face.title} ratings={face.ratings} img={face.img} url={face.url}
-                                              giturl={face.giturl} gitstars={face.gitstars} />
+                                              giturl={face.giturl} gitstars={face.gitstars}/>
                             </div>
                         ))}
                     </div>
@@ -31,7 +31,7 @@ function App() {
 
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
                         {Sites.map((site, index) => (
                             <div key={index}>
                                 <SiteDisplay title={site.title} url={site.url} desc={site.desc} img={site.img}/>

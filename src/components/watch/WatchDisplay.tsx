@@ -28,7 +28,7 @@ function WatchDisplay({title, ratings, img, url, gitstars}: tempProps) {
 
 
     return (
-        <div className="card cursor-pointer overflow-hidden grid grid-cols-2" onClick={openPage}
+        <div className="card cursor-pointer text-center overflow-hidden grid grid-cols-2" onClick={openPage}
              onMouseEnter={setHoverStart} onMouseLeave={setHoverEnd}>
 
             <div className="flex w-full h-full justify-center items-center">

@@ -27,7 +27,7 @@ function SiteDisplay({title, url, desc, img}: tempProps) {
 
 
     return (
-        <div className="card cursor-pointer overflow-hidden w-96 h-56" onClick={openPage} onMouseEnter={setHoverStart}
+        <div className="card cursor-pointer overflow-hidden" onClick={openPage} onMouseEnter={setHoverStart}
              onMouseLeave={setHoverEnd}>
 
             <div className="grid [grid-template-areas:'stack'] h-full w-full">
