@@ -1,15 +1,15 @@
 [
   {
-    "title": "Stacker",
-    "desc": "A vue.js version of the popular arcade machine. Now with extra customization!",
-    "img": "/img/site/stacker.png",
-    "url": "Stacker"
-  },
-  {
     "title": "Quantum Poem",
     "desc": "A tribute to Outer Wilds in react. The poem changes when you refresh or click the page.",
     "img": "/img/site/ow.png",
     "url": "Quantum-Poem"
+  },
+  {
+    "title": "GitHub Stats",
+    "desc": "My personal version of the test site my GitHub Stats program creates",
+    "img": "/img/site/stats.png",
+    "url": "Lightweight-GitHub-Stats"
   },
   {
     "title": "SamaritanGPT",
@@ -18,9 +18,9 @@
     "url": "Samaritan"
   },
   {
-    "title": "GitHub Stats",
-    "desc": "My personal version of the test site my GitHub Stats program creates",
-    "img": "/img/site/stats.png",
-    "url": "Lightweight-GitHub-Stats"
+    "title": "Stacker",
+    "desc": "A vue.js version of the popular arcade machine. Now with extra customization!",
+    "img": "/img/site/stacker.png",
+    "url": "Stacker"
   }
 ]

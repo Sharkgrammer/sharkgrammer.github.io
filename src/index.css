@@ -15,5 +15,9 @@
 }
 
 .card {
-    @apply border-4 border-gray-900 rounded-2xl;
+    @apply border-4 border-gray-800 rounded-2xl;
+}
+
+.icon-center{
+    @apply flex justify-center items-center cursor-pointer;
 }

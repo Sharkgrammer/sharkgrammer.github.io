@@ -1,4 +1,3 @@
-import {ChartBarIcon, StarIcon} from "@heroicons/react/24/outline";
 import {useState} from "react";
 
 interface tempProps {
@@ -10,7 +9,7 @@ interface tempProps {
     gitstars: string;
 }
 
-function WatchDisplay({title, ratings, img, url, gitstars}: tempProps) {
+function WatchDisplay({title, img, url}: tempProps) {
 
     const [display, setDisplay] = useState(false);
 
@@ -28,53 +27,21 @@ function WatchDisplay({title, ratings, img, url, gitstars}: tempProps) {
 
 
     return (
-        <div className="card cursor-pointer text-center overflow-hidden grid grid-cols-2" onClick={openPage}
+        <div className="card cursor-pointer text-center overflow-hidden grid grid-cols-1" onClick={openPage}
              onMouseEnter={setHoverStart} onMouseLeave={setHoverEnd}>
 
-            <div className="flex w-full h-full justify-center items-center">
+            <div className={"flex w-full h-full justify-center items-center px-1 " + (display ? "bg-gray-50" : "bg-white") }>
                 <img className="w-40" src={img}/>
             </div>
 
             <div
-                className={"grid [grid-template-areas:'stack'] text-white " + (display ? "bg-gray-800" : "bg-gray-900")}>
+                className={"grid [grid-template-areas:'stack'] px-1 text-white " + (display ? "bg-gray-700" : "bg-gray-800")}>
 
-                <div className="flex justify-center items-center [grid-area:stack]">
-                    <h1 className="w-40 text-2xl font-bold">{title}</h1>
+                <div className="flex justify-center items-center h-20 [grid-area:stack]">
+                    <h1 className="text-xl font-bold">{title}</h1>
                 </div>
 
-                <div className="flex items-end w-full h-full [grid-area:stack] pb-1">
-
-                    <div className="grid grid-cols-2 w-full px-2 items-center">
-
-                        {/*
-                        <div className="">
-                            {giturl && (
-                                <img className="w-10 text-red-500" src={GitHubIcon} onClick={openGitHub}/>
-                            )}
-                        </div>
-                        */}
-
-                        <div className="col-start-2 flex items-end justify-end gap-2">
-
-                            {gitstars && (
-                                <div>
-                                    <StarIcon className="w-10"/>
-                                    <p>{gitstars}</p>
-                                </div>
-                            )}
-
-                            <div>
-                                <ChartBarIcon className="w-10"/>
-                                <p>{ratings}</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
-
 
         </div>
     )
