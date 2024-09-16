@@ -21,3 +21,7 @@
 .icon-center{
     @apply flex justify-center items-center cursor-pointer;
 }
+
+.wave{
+    @apply w-full select-none;
+}

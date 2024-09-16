@@ -1,10 +1,11 @@
+import Wave from "../../assets/img/wave-top.svg";
+
 function Footer() {
 
     return (
         <div>
-
-            {/* TODO footer? */}
-
+            <img src={Wave} className="wave"/>
+            <div className="bg-cyan h-10 w-full"/>
         </div>
     )
 }

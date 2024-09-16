@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
         extend: {
+            colors: {
+                cyan: 'rgb(0, 204, 204)',
+            },
             animation: {
                 'slide-up-op': 'slide-up-op 500ms',
                 'slide-up': 'slide-up 500ms',
