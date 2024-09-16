@@ -4,6 +4,7 @@ import Footer from "./components/nav/Footer.tsx";
 import WatchView from "./components/view/WatchView.tsx";
 import SiteView from "./components/view/SiteView.tsx";
 import PersonalView from "./components/view/PersonalView.tsx";
+import VidView from "./components/view/VidView.tsx";
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
                 <WatchView/>
 
                 <SiteView/>
+
+                <VidView />
 
                 <Footer/>
             </div>
