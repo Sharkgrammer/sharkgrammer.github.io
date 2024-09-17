@@ -18,6 +18,10 @@ function WatchView() {
                     ))}
                 </div>
 
+                <div className="w-full flex justify-end py-1 text-white">
+                    <p>*because Fitbit has removed third-party watch faces in the EU, the links to the watch faces above no longer function within the EU.</p>
+                </div>
+
             </div>
 
             <Wave top={false}/>
