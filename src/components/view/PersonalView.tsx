@@ -17,7 +17,7 @@ function PersonalView() {
     }
 
     return (
-        <div className="py-5">
+        <div className="py-5 bg-white">
             <div className="flex justify-center">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2">
@@ -47,7 +47,6 @@ function PersonalView() {
 
                     </div>
                 </div>
-
 
             </div>
         </div>

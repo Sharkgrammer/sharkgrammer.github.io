@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-cyan;
+}
+
 .text-stroke {
     -webkit-text-stroke-width: 1px;
 }
@@ -23,5 +27,5 @@
 }
 
 .wave{
-    @apply w-full select-none;
+    @apply w-full select-none bg-white;
 }
