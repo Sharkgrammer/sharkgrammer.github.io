@@ -20,10 +20,10 @@ function App() {
                 <PersonalView/>
 
                 <Wave top={true}/>
-                <WatchView/>
+                <ProjectView/>
 
                 <Wave top={false}/>
-                <ProjectView/>
+                <WatchView/>
 
                 <Wave top={true}/>
                 <SiteView/>
