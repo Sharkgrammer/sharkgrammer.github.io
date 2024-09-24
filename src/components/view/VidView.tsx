@@ -1,12 +1,10 @@
-import Wave from "../util/Wave.tsx";
 import Videos from "../../assets/data/videos.json";
 
 function VidView() {
 
     return (
-        <div>
-            <Wave top={true}/>
-            <div className="flex justify-center bg-cyan">
+        <div className="bg-white">
+            <div className="flex justify-center">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 px-2 py-2">
 

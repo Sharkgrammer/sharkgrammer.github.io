@@ -1,5 +1,3 @@
-import Wave from "../util/Wave.tsx";
-
 function ProjectView() {
 
     return (
@@ -19,8 +17,6 @@ function ProjectView() {
                     <img className="" src="https://sharkgrammer.github.io/Lightweight-GitHub-Stats/data.png"/>
                 </div>
             </div>
-
-            <Wave  top={true}/>
 
         </div>
     )

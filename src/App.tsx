@@ -6,6 +6,7 @@ import SiteView from "./components/view/SiteView.tsx";
 import PersonalView from "./components/view/PersonalView.tsx";
 import VidView from "./components/view/VidView.tsx";
 import ProjectView from "./components/view/ProjectView.tsx";
+import Wave from "./components/util/Wave.tsx";
 
 function App() {
 
@@ -15,16 +16,22 @@ function App() {
             <div className="flex flex-col">
                 <Navbar/>
 
+                <Wave top={false}/>
                 <PersonalView/>
 
+                <Wave top={true}/>
                 <WatchView/>
 
+                <Wave top={false}/>
                 <ProjectView/>
 
+                <Wave top={true}/>
                 <SiteView/>
 
+                <Wave top={false}/>
                 <VidView/>
 
+                <Wave top={true}/>
                 <Footer/>
             </div>
 
