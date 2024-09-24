@@ -13,7 +13,7 @@ const LazyLoader = ({children}) => {
         >
             {children}
         </div>
-    );
-};
+    )
+}
 
 export default LazyLoader;
