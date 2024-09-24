@@ -13,6 +13,7 @@ export default {
                 'slide-up-op': 'slide-up-op 500ms',
                 'slide-up': 'slide-up 500ms',
                 'slide-down': 'slide-down 500ms',
+                'load-in' : 'slide-up 2000ms',
             },
             keyframes: {
                 'slide-up-op': {

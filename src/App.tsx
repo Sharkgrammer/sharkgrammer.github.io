@@ -7,6 +7,7 @@ import PersonalView from "./components/view/PersonalView.tsx";
 import VidView from "./components/view/VidView.tsx";
 import ProjectView from "./components/view/ProjectView.tsx";
 import Wave from "./components/util/Wave.tsx";
+import LazyLoader from "./components/util/LazyLoader.tsx";
 
 function App() {
 
@@ -15,24 +16,34 @@ function App() {
 
             <div className="flex flex-col">
                 <Navbar/>
-
                 <Wave top={false}/>
+
                 <PersonalView/>
-
                 <Wave top={true}/>
-                <ProjectView/>
 
-                <Wave top={false}/>
-                <WatchView/>
+                <LazyLoader>
+                    <ProjectView/>
+                </LazyLoader>
 
-                <Wave top={true}/>
-                <SiteView/>
+                <LazyLoader>
+                    <Wave top={false}/>
+                    <WatchView/>
+                    <Wave top={true}/>
+                </LazyLoader>
 
-                <Wave top={false}/>
-                <VidView/>
+                <LazyLoader>
+                    <SiteView/>
+                    <Wave top={false}/>
+                </LazyLoader>
 
-                <Wave top={true}/>
-                <Footer/>
+                <LazyLoader>
+                    <VidView/>
+                    <Wave top={true}/>
+                </LazyLoader>
+
+                <LazyLoader>
+                    <Footer/>
+                </LazyLoader>
             </div>
 
         </div>

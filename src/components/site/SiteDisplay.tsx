@@ -38,7 +38,7 @@ function SiteDisplay({title, url, desc, img}: tempProps) {
                 <div className="[grid-area:stack] grid h-full">
 
                     <div className="flex justify-center items-center">
-                        <h1 className={"text-4xl font-bold text-stroke text-white stroke-black " + (display ? "animate-slide-up" : (init && "animate-slide-down"))}>{title}</h1>
+                        <h1 className={`text-4xl font-bold text-stroke text-white stroke-black ${display ? "animate-slide-up" : (init && "animate-slide-down")}`}>{title}</h1>
                     </div>
 
                     {display && (
