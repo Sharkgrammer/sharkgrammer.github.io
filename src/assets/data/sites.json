@@ -6,6 +6,12 @@
     "url": "Quantum-Poem"
   },
   {
+    "title": "Twitter Clone",
+    "desc": "A Vue.js twitter clone",
+    "img": "/img/site/pulse.png",
+    "url": "Pulse-Frontend"
+  },
+  {
     "title": "GitHub Stats",
     "desc": "My personal version of the test site my GitHub Stats program creates",
     "img": "/img/site/stats.png",
