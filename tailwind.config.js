@@ -7,7 +7,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                cyan: 'rgb(0, 204, 204)',
+                // COLOURS FOR PERSONAL
+                '1-background': "#2d2d30"
             },
             animation: {
                 'slide-up-op': 'slide-up-op 500ms',

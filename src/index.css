@@ -3,29 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-cyan;
-}
-
-.text-stroke {
-    -webkit-text-stroke-width: 1px;
-}
-
-.text-stroke.stroke-black {
-    -webkit-text-stroke-color: black;
-}
-
-.text-stroke.stroke-white {
-    -webkit-text-stroke-color: white;
-}
-
-.card {
-    @apply border-4 border-gray-800 rounded-2xl;
-}
-
-.icon-center{
-    @apply flex justify-center items-center cursor-pointer;
-}
-
-.wave{
-    @apply w-full select-none bg-white;
+    @apply bg-red-200;
 }
