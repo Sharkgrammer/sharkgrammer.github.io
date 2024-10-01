@@ -1,10 +1,9 @@
-import './PersonalView.css'
 import {useState} from "react";
 
-import data from "../../assets/data/personal.json";
+import data from "../assets/data/personal.json";
 
-import TopTab from "../../components/personal/TopTab.tsx";
-import JSONFormat from "../../components/personal/JSONFormat.tsx";
+import TopTab from "../components/personal/TopTab.tsx";
+import JSONFormat from "../components/personal/JSONFormat.tsx";
 
 function PersonalView() {
 

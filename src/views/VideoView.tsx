@@ -1,5 +1,5 @@
 // @ts-ignore - watch is fine where it is.
-import watch from '../../assets/img/views/video/watch.png';
+import watch from '../assets/img/views/video/watch.png';
 
 function VideoView() {
 

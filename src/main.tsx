@@ -3,12 +3,12 @@ import {createRoot} from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import ErrorView from "./views/error/ErrorView.tsx";
-import PersonalView from "./views/personal/PersonalView.tsx";
-import ProjectView from "./views/project/ProjectView.tsx";
-import WatchView from "./views/watch/WatchView.tsx";
-import SiteView from "./views/site/SiteView.tsx";
-import VideoView from "./views/video/VideoView.tsx";
+import ErrorView from "./views/ErrorView.tsx";
+import PersonalView from "./views/PersonalView.tsx";
+import ProjectView from "./views/ProjectView.tsx";
+import WatchView from "./views/WatchView.tsx";
+import SiteView from "./views/SiteView.tsx";
+import VideoView from "./views/VideoView.tsx";
 
 const router = createBrowserRouter([
     {

@@ -3,5 +3,20 @@
 @tailwind utilities;
 
 body {
-    @apply bg-red-200;
+    @apply bg-1-background;
+}
+
+.col1{
+    @apply pl-0;
+}
+
+.col2{
+    @apply pl-5;
+}
+
+.col3{
+    @apply pl-10;
+}
+
+.col4{
 }

@@ -1,7 +1,7 @@
 function WatchView() {
 
     return (
-        <div className="">
+        <div className="col3">
             <p>WatchView</p>
         </div>
     )
