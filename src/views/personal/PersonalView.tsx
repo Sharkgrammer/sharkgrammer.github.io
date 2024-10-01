@@ -22,7 +22,7 @@ function PersonalView() {
 
                 <div className="flex">
                     {data.map((line, index) => (
-                        <TopTab text={line.title} active={tab == index} runClick={() => updateTab(index)} key={index}/>
+                        <TopTab text={line.title} active={tab == index} runClick={() => updateTab(index)} key={index} lang={line.lang}/>
                     ))}
                 </div>
 

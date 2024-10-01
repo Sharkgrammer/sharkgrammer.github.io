@@ -13,7 +13,8 @@ export default {
                 '1-pane-background-light': "#262626",
                 '1-text-dim': "#626269",
                 '1-blue': "#9cdcfe",
-                '1-orange': "#ce9178"
+                '1-orange': "#ce9178",
+                '1-yellow': "#bdba34",
             },
             animation: {
                 'slide-up-op': 'slide-up-op 500ms',
