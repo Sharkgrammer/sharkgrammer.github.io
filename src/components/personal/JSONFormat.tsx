@@ -5,9 +5,11 @@ interface JSONLine {
     bracket: boolean,
     bracketBack: boolean,
     colon: boolean,
-    comma: boolean,
+    comma: boolean
 }
 
+// Takes a correctly formatted JSON file and displays it to the end user.
+// The interface JSONLine contains all recognized keys that can be used to customize the display.
 function JSONFormat(props: any) {
 
     return (

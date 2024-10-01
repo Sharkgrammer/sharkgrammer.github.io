@@ -29,6 +29,7 @@ function PersonalView() {
 
             </div>
 
+            {/* Center pane */}
             <div className="bg-1-pane-background flex flex-col items-start text-2xl w-full select-none">
                 <JSONFormat data={data[tab].data}/>
             </div>
