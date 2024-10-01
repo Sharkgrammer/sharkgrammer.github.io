@@ -14,22 +14,22 @@ function PersonalView() {
     }
 
     return (
-        <div className="h-full text-white">
+        <div className="text-white h-full bg-1-background flex flex-col">
 
             {/* The top file selector pane */}
             <div className="flex justify-start items-center">
 
                 <div className="flex">
                     {data.map((line, index) => (
-                        <TopTab text={line.title} active={tab == index} runClick={() => updateTab(index)} key={index} lang={line.lang}/>
+                        <TopTab text={line.title} active={tab == index} runClick={() => updateTab(index)} key={index}
+                                lang={line.lang}/>
                     ))}
                 </div>
-
 
             </div>
 
             {/* Center pane */}
-            <div className="bg-1-pane-background flex flex-col items-start text-2xl w-full select-none">
+            <div className="flex-1 bg-1-pane-background flex flex-col items-start text-2xl w-full select-none">
                 <JSONFormat data={data[tab].data}/>
             </div>
 
