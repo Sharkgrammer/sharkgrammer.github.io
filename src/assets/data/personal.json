@@ -1,0 +1,118 @@
+[
+  {
+    "title": "greetings.json",
+    "lang": "JSON",
+    "data": [
+      {
+        "row": "col1",
+        "bracket": true
+      },
+      {
+        "title": "greeting",
+        "value": "Hi!",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "message",
+        "value": "This is a website!",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "about me",
+        "row": "col2",
+        "colon": true,
+        "bracket": true
+      },
+      {
+        "title": "name",
+        "value": "Daniel Keane Kelly",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "info",
+        "value": "I like to make things",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "row": "col2",
+        "bracketBack": true,
+        "comma": true
+      },
+      {
+        "title": "about the site",
+        "row": "col2",
+        "colon": true,
+        "bracket": true
+      },
+      {
+        "title": "info",
+        "value": "A showcase of my work",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "stack",
+        "value": "Built with React & Tailwind",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "msg",
+        "value": "Hope you enjoy!",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "row": "col2",
+        "bracketBack": true
+      },
+      {
+        "row": "col1",
+        "bracketBack": true
+      }
+    ]
+  },
+  {
+    "title": "something.json",
+    "lang": "JSON",
+    "data": [
+      {
+        "row": "col1",
+        "bracket": true
+      },
+      {
+        "title": "greeting",
+        "value": "Hi!",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "msg",
+        "value": "Coming soon!",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "msg2",
+        "value": "Not sure what goes here",
+        "row": "col2",
+        "colon": true
+      },
+      {
+        "row": "col1",
+        "bracketBack": true
+      }
+    ]
+  }
+]

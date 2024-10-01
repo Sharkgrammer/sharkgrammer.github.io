@@ -8,7 +8,12 @@ export default {
         extend: {
             colors: {
                 // COLOURS FOR PERSONAL
-                '1-background': "#2d2d30"
+                '1-background': "#2d2d30",
+                '1-pane-background': "#1e1e1e",
+                '1-pane-background-light': "#262626",
+                '1-text-dim': "#626269",
+                '1-blue': "#9cdcfe",
+                '1-orange': "#ce9178"
             },
             animation: {
                 'slide-up-op': 'slide-up-op 500ms',
