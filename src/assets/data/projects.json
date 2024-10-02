@@ -1,38 +1,103 @@
 [
   {
-    "title": "Quantum Poem",
-    "desc": "A tribute to Outer Wilds in react. The poem changes when you refresh or click the page.",
-    "img": "/img/site/ow.png",
-    "url": "Quantum-Poem"
+    "title": "Lightweight GitHub Stats",
+    "tab": "Stats",
+    "desc": "Uses Python and Github Actions to display stats for your GitHub profile.",
+    "desc2": "It's made to avoid needing to host a server for GitHub stats.",
+    "img": "/img/project/stats.png",
+    "repo": "https://github.com/Sharkgrammer/Lightweight-GitHub-Stats",
+    "site": "https://sharkgrammer.github.io/Lightweight-GitHub-Stats"
   },
   {
     "title": "Twitter Clone",
-    "desc": "A Vue.js twitter clone",
-    "img": "/img/site/pulse.png",
-    "url": "Pulse-Frontend"
+    "tab": "Pulse",
+    "desc": "A functioning Twitter clone with a Vue.js frontend.",
+    "desc2": "The project uses Django as a REST API server.",
+    "img": "/img/project/pulse.png",
+    "repo": "https://github.com/Sharkgrammer/Pulse-Frontend",
+    "site": "https://sharkgrammer.github.io/Pulse-Frontend"
   },
   {
-    "title": "Does The Shark Die",
-    "desc": "A site for checking if a shark dies in a movie. Jaws would have devastated me as a kid so being able to check would have been helpful.",
-    "img": "/img/site/shark.png",
-    "url": "Does-The-Shark-Die"
-  },
-  {
-    "title": "GitHub Stats",
-    "desc": "My personal version of the test site my GitHub Stats program creates",
-    "img": "/img/site/stats.png",
-    "url": "Lightweight-GitHub-Stats"
+    "title": "Simple Stat Rings",
+    "tab": "Rings",
+    "desc": "Displays the all of users stats using rings.",
+    "desc2": "My most popular watch face with over 300+ reviews.",
+    "img": "/img/project/rings.png",
+    "repo": "https://github.com/Sharkgrammer/Simple-Stat-Rings"
   },
   {
     "title": "SamaritanGPT",
-    "desc": "A Person of Interest Samaritan inspired ChatGPT web interface",
-    "img": "/img/site/sam.png",
-    "url": "Samaritan"
+    "tab": "SamGPT",
+    "desc": "A Person of Interest Samaritan inspired ChatGPT website.",
+    "desc2": "Uses a given API key to access the ChatGPT API.",
+    "img": "/img/project/sam.png",
+    "repo": "https://github.com/Sharkgrammer/Samaritan",
+    "site": "https://sharkgrammer.github.io/Samaritan"
   },
   {
     "title": "Stacker",
-    "desc": "A vue.js version of the popular arcade machine. Now with extra customization!",
-    "img": "/img/site/stacker.png",
-    "url": "Stacker"
+    "tab": "Stacker",
+    "desc": "A Vue.js version of the popular arcade machine.",
+    "desc2": "Now with added customization with themes and sizes.",
+    "img": "/img/project/stacker.png",
+    "repo": "https://github.com/Sharkgrammer/Stacker",
+    "site": "https://sharkgrammer.github.io/Stacker"
+  },
+  {
+    "title": "Does The Shark Die",
+    "tab": "Shark",
+    "desc": "A site for checking if a shark dies in a movie.",
+    "desc2": "Jaws would have devastated me as a kid so being able to check would have been helpful.",
+    "img": "/img/project/shark.png",
+    "repo": "https://github.com/Sharkgrammer/Does-The-Shark-Die",
+    "site": "https://sharkgrammer.github.io/Does-The-Shark-Die"
+  },
+  {
+    "title": "Clockface.json",
+    "tab": "JSON",
+    "desc": "A watch face which displays details like a JSON file in vscode.",
+    "desc2": "It went viral on reddit and has 134 stars on GitHub.",
+    "img": "/img/project/json.png",
+    "repo": "https://github.com/Sharkgrammer/clockface.json"
+  },
+  {
+    "title": "Quantum Poem",
+    "tab": "Poem",
+    "desc": "A simple tribute to Outer Wilds in React.",
+    "desc2": "The poem changes when you refresh or click the page.",
+    "img": "/img/project/ow.png",
+    "repo": "https://github.com/Sharkgrammer/Quantum-Poem",
+    "site": "https://sharkgrammer.github.io/Quantum-Poem"
+  },
+  {
+    "title": "TimePresentation",
+    "tab": "Pres",
+    "desc": "A watch face designed to look like PowerPoint.",
+    "img": "/img/project/power.png",
+    "repo": "https://github.com/Sharkgrammer/TimePresentation"
+  },
+  {
+    "title": "Sonar Secure Messaging",
+    "tab": "Sonar",
+    "desc": "A secure android app using a custom messaging protocol based on onion routing.",
+    "desc2": "My final year project and won an award for best proof of concept.",
+    "img": "/img/project/sonar.png",
+    "repo": "https://github.com/Sharkgrammer/Simple-Stat-Rings"
+  },
+  {
+    "title": "Steamed Hams Watch",
+    "tab": "Steamed",
+    "desc": "A watch OS that tells time using the Steamed Hams clip.",
+    "desc2": "It runs on the open source watch, Watchy.",
+    "img": "/img/project/hams.png",
+    "repo": "https://github.com/Sharkgrammer/Steamed-Hams-Watch"
+  },
+  {
+    "title": "Prescriptive Analytics",
+    "tab": "PA",
+    "desc": "The code I used when teaching Prescriptive Analytics.",
+    "desc2": "Contains code for both OPL and Lingo.",
+    "img": "/img/project/pa.png",
+    "repo": "https://github.com/Sharkgrammer/Prescriptive-Analytics"
   }
 ]

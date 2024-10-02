@@ -10,11 +10,11 @@ interface JSONLine {
 
 // Takes a correctly formatted JSON file and displays it to the end user.
 // The interface JSONLine contains all recognized keys that can be used to customize the display.
-function JSONFormat(props: any) {
+function JSONFormat({data}: {data:any}) {
 
     return (
         <div className="w-full">
-            {props.data.map((line: JSONLine, i: number) => (
+            {data.map((line: JSONLine, i: number) => (
                 <div key={i} className="flex">
                     <div className="w-10 text-right">
                         <span className="text-1-text-dim">{i + 1}</span>

@@ -3,14 +3,13 @@ import {useState} from "react";
 import data from "../assets/data/watchfaces.json";
 import Slide from "../components/watch/Slide.tsx";
 import SlidePreview from "../components/watch/SlidePreview.tsx";
+import DocHeader from "../components/common/DocHeader.tsx";
+import DocTabs from "../components/common/DocTabs.tsx";
 
 function WatchView() {
 
     const [slide, setSlide] = useState(0);
     const [slideChange, setSlideChange] = useState(false);
-
-    let items: string[] = ["File", "Home", "Insert", "Draw", "Design", "Transitions", "Animations", "Slide Show",
-        "Record", "Review", "View", "Help"];
 
     function startAnimation() {
         if (slideChange) return;
@@ -22,7 +21,6 @@ function WatchView() {
     function endAnimation() {
         setSlideChange(false);
 
-
         setSlide(slide >= 2 ? 0 : slide + 1);
     }
 
@@ -30,17 +28,9 @@ function WatchView() {
         <div className="h-full bg-2-background font-semibold flex flex-col" onClick={startAnimation}>
 
             {/* Top Pane */}
-            <div className="bg-2-primary flex justify-center items-center h-12 py-2">
-                <h1 className="text-xl text-white whitespace-nowrap">Watch Face Presentation</h1>
-            </div>
+            <DocHeader title="Watch Face Presentation" colour="bg-2-primary" />
 
-            {/* Top Pane */}
-            <div
-                className="bg-2-pane-background flex items-center text-lg h-10 text-2-text-dim gap-3 px-3 py-2 border-b-2 border-2-shadow">
-                {items.map((item, index) => (
-                    <span className="whitespace-nowrap" key={index}>{item}</span>
-                ))}
-            </div>
+            <DocTabs colour="bg-2-pane-background" border="border-2-shadow" text="text-2-text-dim" />
 
             {/* Center & Left Panes */}
             <div className="h-full flex-1 flex">

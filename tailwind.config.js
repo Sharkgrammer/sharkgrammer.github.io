@@ -21,7 +21,15 @@ export default {
                 '2-pane-background': '#f3f2f1',
                 '2-primary': '#ba3f28',
                 '2-shadow': '#d6d6d6',
-                '2-text-dim': '#4d4b49'
+                '2-text-dim': '#4d4b49',
+
+                // COLOURS FOR PROJECTS - EXCEL BASED
+                '3-background': '#e6e6e6',
+                '3-pane-background': '#f3f2f1',
+                '3-primary': '#007337',
+                '3-shadow': '#d6d6d6',
+                '3-shadow-dark': '#c0c0c0',
+                '3-text-dim': '#4d4b49'
             },
             maxHeight: {
                 '5/6': '83.333333%',

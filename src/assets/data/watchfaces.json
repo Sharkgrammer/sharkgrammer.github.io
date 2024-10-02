@@ -29,7 +29,7 @@
     ]
   },
   {
-    "title": "Slide 2",
+    "title": "They're fun to make",
     "faces": [
       {
         "title": "Moonlit Sea",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "title": "Slide 3",
+    "title": "One here looks familiar..",
     "faces": [
       {
         "title": "Time Presentation",
@@ -75,6 +75,10 @@
         "url": "https://gallery.fitbit.com/details/01615f4b-704f-4e9e-af5e-e7a0d39959f2",
         "giturl": "https://github.com/Sharkgrammer/Too-Many-Rings",
         "gitstars": ""
+      },
+      {
+        "title": "Steamed Hams",
+        "img": "/img/watch/hams.png"
       }
     ]
   }
