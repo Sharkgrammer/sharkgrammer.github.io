@@ -2,7 +2,7 @@ import pointer from "../../assets/img/icons/pointer.svg";
 import {useEffect, useRef, useState} from "react";
 import Draggable from 'react-draggable';
 
-function SmallTimeline({duration, seconds, callback}: { duration: number, seconds: number, callback: any}) {
+function SmallTimeline({duration, seconds, callback}: { duration: number, seconds: number, callback: any }) {
 
     const nodeRef = useRef(null);
 
@@ -13,7 +13,7 @@ function SmallTimeline({duration, seconds, callback}: { duration: number, second
 
     useEffect(() => {
 
-        if (!isNaN(seconds)){
+        if (!isNaN(seconds)) {
             // @ts-ignore
             let w = document.getElementById("smallTimeline").offsetWidth;
 
@@ -38,7 +38,7 @@ function SmallTimeline({duration, seconds, callback}: { duration: number, second
 
             let posPercent = (position.x / width);
 
-            if (!isNaN(posPercent)){
+            if (!isNaN(posPercent)) {
                 callback((duration * posPercent));
             }
         }
@@ -65,17 +65,17 @@ function SmallTimeline({duration, seconds, callback}: { duration: number, second
 
             <div className="w-full h-full" id="smallTimeline">
 
-                <div className="-ml-[12px]">
+                <div className="-ml-[10px]">
                     <Draggable position={position} onStart={startDrag} onStop={stopDrag} axis="x"
                                bounds={{top: 0, left: 0, right: width, bottom: 0}}
                                nodeRef={nodeRef} onDrag={handleDrag}>
                         <div ref={nodeRef} className="select-none cursor-pointer w-fit">
-                            <img src={pointer} className="w-6 pointer-events-none"/>
+                            <img src={pointer} className="w-5 pointer-events-none"/>
                         </div>
                     </Draggable>
                 </div>
 
-                <div className="text-white vertical-lines h-5 border-b-2 border-4-shadow-light -mt-2">
+                <div className="text-white vertical-lines h-4 border-b-2 border-4-shadow-light -mt-2">
 
                 </div>
 

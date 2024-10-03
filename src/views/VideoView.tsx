@@ -16,6 +16,7 @@ import {
     PlayIcon, SpeakerWaveIcon, SpeakerXMarkIcon
 } from "@heroicons/react/24/solid";
 import SmallTimeline from "../components/video/SmallTimeline.tsx";
+import BigTimeline from "../components/video/BigTimeline.tsx";
 
 function VideoView() {
 
@@ -200,12 +201,17 @@ function VideoView() {
                 </div>
 
                 <div
-                    className="h-full flex-1 flex flex-col vidborder text-white">
+                    className="h-full flex-1 flex flex-col vidborder">
 
                     <div className="p-2">
                         <div className="flex gap-2">
                             <VidTab text={data[video].title} active={true}/>
                         </div>
+                    </div>
+
+                    <div className="w-full h-full">
+                        <BigTimeline duration={duration} seconds={secondsProgressed} title={data[video].title}
+                                     muted={muted} callback={timelineCallback} timeFormat={convertTime}/>
                     </div>
 
                 </div>

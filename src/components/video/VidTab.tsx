@@ -7,9 +7,9 @@ function VidTab({text, active}: { text: string, active: boolean }) {
         ${active ? "text-gray-200 border-b-2 border-white" : "text-4-text-dim"}`}>
 
             <div className="flex items-center h-full">
-                <span className="text-base">{text}</span>
+                <span className="text-sm">{text}</span>
                 {active && (
-                    <img src={burger} className="pl-1 pt-1 w-4"/>
+                    <img src={burger} className="pl-1 pt-0.5 w-4"/>
                 )}
             </div>
 

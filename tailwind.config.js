@@ -34,7 +34,11 @@ export default {
                 // COLOURS FOR VIDEOS - PREMIERE PRO BASED
                 '4-background': '#232323',
                 '4-pane-background': '#1d1d1d',
+                '4-pane-background-light': '#262626',
                 '4-blue': '#2b87cf',
+                '4-blue-light': '#729acc',
+                '4-purple': '#a690e0',
+                '4-yellow': '#f0f000',
                 '4-shadow': '#161616',
                 '4-shadow-light': '#303030',
                 '4-text-dim': '#7d7d7d'

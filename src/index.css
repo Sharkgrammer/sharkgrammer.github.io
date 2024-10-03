@@ -29,11 +29,11 @@
 }
 
 /* PROJECT CSS */
-.cell{
+.cell {
     @apply w-20 h-8 min-w-20 min-h-8;
 }
 
-.numcell{
+.numcell {
     @apply w-10 h-8 min-w-10 min-h-8;
 }
 
@@ -43,17 +43,21 @@
 }
 
 .vidbutton {
-    @apply text-gray-200 size-8 cursor-pointer hover:text-white active:text-4-blue;
+    @apply text-gray-200 size-6 cursor-pointer hover:text-white active:text-4-blue;
+}
+
+.timelinebutt {
+    @apply h-6 w-8 py-0.5 px-2;
 }
 
 /* copying colour from tailwind */
 .vertical-lines {
     background-image: repeating-linear-gradient(
             90deg,
-            #545454 ,
-            #545454  2px,
-            transparent 2px,
-            transparent 6px,
-            #545454  5px
+            #545454,
+            #545454 5px,
+            transparent 5px,
+            transparent 12px,
+            #545454 1px
     );
 }
