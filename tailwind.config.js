@@ -41,13 +41,22 @@ export default {
                 '4-yellow': '#f0f000',
                 '4-shadow': '#161616',
                 '4-shadow-light': '#303030',
-                '4-text-dim': '#7d7d7d'
+                '4-text-dim': '#7d7d7d',
+
+                // COLOURS FOR REPOS - GMAIL BASED
+                '5-background': '#1e1e1e',
+                '5-pane-background': '#141414',
+                '5-pane-background-light': '#292a2b',
+                '5-shadow': '#2f2f2f',
+                '5-text-light': '#a9a9aa'
             },
             maxHeight: {
                 '5/6': '83.333333%',
             },
             maxWidth: {
                 'powerPane': '30%',
+                '1/3': '33.333333%',
+                '4/5': '80%',
                 '5/6': '83.333333%',
             },
             animation: {

@@ -10,7 +10,7 @@ function GenerateCells({w, h}: { w: number, h: number }) {
         <div>
             <div className="flex">
 
-                <div className="numcell border-b-2 border-r-2 border-3-shadow-dark"/>
+                <div className="num-cell border-b-2 border-r-2 border-3-shadow-dark"/>
 
                 <div className="w-full flex text-xl font-bold overflow-hidden">
 

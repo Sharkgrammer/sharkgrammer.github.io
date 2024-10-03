@@ -5,10 +5,10 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import ErrorView from "./views/ErrorView.tsx";
 import PersonalView from "./views/PersonalView.tsx";
-import ProjectView from "./views/ProjectView.tsx";
 import WatchView from "./views/WatchView.tsx";
-import SiteView from "./views/SiteView.tsx";
+import ProjectView from "./views/ProjectView.tsx";
 import VideoView from "./views/VideoView.tsx";
+import RepoView from "./views/RepoView.tsx";
 
 const router = createBrowserRouter([
     {
@@ -30,11 +30,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "t3",
-                element: <SiteView/>,
+                element: <VideoView/>,
             },
             {
                 path: "t4",
-                element: <VideoView/>,
+                element: <RepoView/>,
             },
         ],
     },

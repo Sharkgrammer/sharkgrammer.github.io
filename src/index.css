@@ -33,20 +33,20 @@
     @apply w-20 h-8 min-w-20 min-h-8;
 }
 
-.numcell {
+.num-cell {
     @apply w-10 h-8 min-w-10 min-h-8;
 }
 
 /* VIDEO CSS */
-.vidborder {
+.vid-border {
     @apply border-2 border-4-shadow hover:border-4-blue;
 }
 
-.vidbutton {
+.vid-button {
     @apply text-gray-200 size-6 cursor-pointer hover:text-white active:text-4-blue;
 }
 
-.timelinebutt {
+.timeline-butt {
     @apply h-6 w-8 py-0.5 px-2;
 }
 
@@ -60,4 +60,13 @@
             transparent 12px,
             #545454 1px
     );
+}
+
+/* REPO CSS */
+.mail-icon {
+    @apply size-5 min-w-5 min-h-5 hover:text-white;
+}
+
+.mail-icon-dark {
+    @apply size-5 min-w-5 min-h-5;
 }

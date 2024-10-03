@@ -96,7 +96,7 @@ function VideoView() {
     return (
         <div className="w-full h-full font-semibold flex bg-4-background">
 
-            <div className="w-3/5 h-full flex flex-col vidborder">
+            <div className="w-3/5 h-full flex flex-col vid-border">
 
                 <div className="p-2">
                     <div className="flex gap-2">
@@ -127,7 +127,7 @@ function VideoView() {
 
             <div className="h-full w-full flex flex-col">
 
-                <div className="h-fit flex flex-col vidborder">
+                <div className="h-fit flex flex-col vid-border">
 
                     <div className="p-2">
                         <div className="flex gap-2">
@@ -166,7 +166,7 @@ function VideoView() {
 
                         <div className="flex gap-2">
 
-                            <div onClick={() => handleMuted(!muted)} className="vidbutton">
+                            <div onClick={() => handleMuted(!muted)} className="vid-button">
                                 {muted ? (
                                     <SpeakerXMarkIcon/>
                                 ) : (
@@ -174,10 +174,10 @@ function VideoView() {
                                 )}
                             </div>
 
-                            <ArrowUturnLeftIcon className="vidbutton"/>
-                            <BackwardIcon className="vidbutton" onClick={skipBackward}/>
+                            <ArrowUturnLeftIcon className="vid-button"/>
+                            <BackwardIcon className="vid-button" onClick={skipBackward}/>
 
-                            <div onClick={() => handlePlaying(!playing)} className="vidbutton">
+                            <div onClick={() => handlePlaying(!playing)} className="vid-button">
                                 {playing ? (
                                     <PauseIcon/>
                                 ) : (
@@ -185,10 +185,10 @@ function VideoView() {
                                 )}
                             </div>
 
-                            <ForwardIcon className="vidbutton" onClick={skipForward}/>
-                            <ArrowUturnRightIcon className="vidbutton"/>
+                            <ForwardIcon className="vid-button" onClick={skipForward}/>
+                            <ArrowUturnRightIcon className="vid-button"/>
 
-                            <div onClick={() => handleLooping(!looping)} className="vidbutton">
+                            <div onClick={() => handleLooping(!looping)} className="vid-button">
                                 {looping ? (
                                     <ArrowPathIcon/>
                                 ) : (
@@ -201,7 +201,7 @@ function VideoView() {
                 </div>
 
                 <div
-                    className="h-full flex-1 flex flex-col vidborder">
+                    className="h-full flex-1 flex flex-col vid-border">
 
                     <div className="p-2">
                         <div className="flex gap-2">

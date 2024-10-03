@@ -115,15 +115,15 @@ function BigTimeline({duration, seconds, title, muted, callback, timeFormat}: {
 
                     <div className="flex bg-4-pane-background-light h-full">
 
-                        <LockClosedIcon className="timelinebutt"/>
+                        <LockClosedIcon className="timeline-butt"/>
 
-                        <div className="timelinebutt flex items-center justify-center bg-4-blue text-xs">
+                        <div className="timeline-butt flex items-center justify-center bg-4-blue text-xs">
                             <span>{desc}</span>
                         </div>
 
-                        <AdjustmentsHorizontalIcon className="timelinebutt bg-4-background"/>
+                        <AdjustmentsHorizontalIcon className="timeline-butt bg-4-background"/>
 
-                        <EyeIcon className="timelinebutt bg-4-background"/>
+                        <EyeIcon className="timeline-butt bg-4-background"/>
 
                         <div className="w-20"/>
                     </div>
