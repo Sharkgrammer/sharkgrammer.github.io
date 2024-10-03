@@ -29,7 +29,15 @@ export default {
                 '3-primary': '#007337',
                 '3-shadow': '#d6d6d6',
                 '3-shadow-dark': '#c0c0c0',
-                '3-text-dim': '#4d4b49'
+                '3-text-dim': '#4d4b49',
+
+                // COLOURS FOR VIDEOS - PREMIERE PRO BASED
+                '4-background': '#232323',
+                '4-pane-background': '#1d1d1d',
+                '4-blue': '#2b87cf',
+                '4-shadow': '#161616',
+                '4-shadow-light': '#303030',
+                '4-text-dim': '#7d7d7d'
             },
             maxHeight: {
                 '5/6': '83.333333%',

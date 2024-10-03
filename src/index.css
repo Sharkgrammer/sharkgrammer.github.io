@@ -36,3 +36,8 @@
 .numcell{
     @apply w-10 h-8 min-w-10 min-h-8;
 }
+
+/* VIDEO CSS */
+.vidborder {
+    @apply border-2 border-4-shadow hover:border-4-blue;
+}

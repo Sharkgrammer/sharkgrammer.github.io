@@ -2,7 +2,7 @@ import TopCell from "./TopCell.tsx";
 import NumCell from "./NumCell.tsx";
 import Cell from "./Cell.tsx";
 
-function GenerateCells({w, h}: {w:number, h:number}) {
+function GenerateCells({w, h}: { w: number, h: number }) {
 
     const topChars = Array.from({length: w}, (_, i) => String.fromCharCode(65 + i));
 
@@ -22,23 +22,20 @@ function GenerateCells({w, h}: {w:number, h:number}) {
             </div>
 
 
-            <div className="">
+            {Array.from({length: h}).map((_, i) => (
 
-                {Array.from({length: h}).map((_, i) => (
+                <div className="flex" key={i}>
 
-                    <div className="flex" key={i}>
+                    <NumCell num={i + 1}/>
 
-                        <NumCell num={i + 1}/>
+                    {Array.from({length: w}).map((_, i) => (
+                        <Cell key={i}/>
+                    ))}
 
-                        {Array.from({length: w}).map((_, i) => (
-                                <Cell key={i}/>
-                        ))}
+                </div>
 
-                    </div>
+            ))}
 
-                ))}
-
-            </div>
         </div>
     )
 }

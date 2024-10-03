@@ -1,6 +1,18 @@
 [
-  "https://www.youtube.com/embed/zyjujBA1eVk?si=1FbyIlT75PgFJ8tE",
-  "https://www.youtube.com/embed/Qxiqgw56k1o?si=lH8p9R5QldGC87YN",
-  "https://www.youtube.com/embed/r7RtaeCx-7o?si=b09dnhym4MWfIgks",
-  "https://www.youtube.com/embed/eJxtoCWF4Sg?si=o4b4KcgJeUNxxDWW"
+  {
+    "title": "Steamed Hams But It's On My Watch",
+    "id": "9f9wsP--DIY"
+  },
+  {
+    "title": "PowerPoint Watch Face",
+    "id": "Qxiqgw56k1o"
+  },
+  {
+    "title": "Samaritan ChatGPT Web Interface",
+    "id": "r7RtaeCx-7o"
+  },
+  {
+    "title": "Twitter Clone Demo",
+    "id": "eJxtoCWF4Sg"
+  }
 ]
