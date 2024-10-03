@@ -41,3 +41,19 @@
 .vidborder {
     @apply border-2 border-4-shadow hover:border-4-blue;
 }
+
+.vidbutton {
+    @apply text-gray-200 size-8 cursor-pointer hover:text-white active:text-4-blue;
+}
+
+/* copying colour from tailwind */
+.vertical-lines {
+    background-image: repeating-linear-gradient(
+            90deg,
+            #545454 ,
+            #545454  2px,
+            transparent 2px,
+            transparent 6px,
+            #545454  5px
+    );
+}

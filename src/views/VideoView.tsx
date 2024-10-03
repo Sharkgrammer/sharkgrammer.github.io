@@ -2,30 +2,86 @@ import {useState, useRef} from "react";
 
 import data from "../assets/data/videos.json";
 
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from 'react-player/youtube';
 import VidPreview from "../components/video/VidPreview.tsx";
 import VidTab from "../components/video/VidTab.tsx";
 
+import {
+    ArrowPathIcon,
+    ArrowUturnLeftIcon,
+    ArrowUturnRightIcon,
+    BackwardIcon,
+    ForwardIcon, NoSymbolIcon,
+    PauseIcon,
+    PlayIcon, SpeakerWaveIcon, SpeakerXMarkIcon
+} from "@heroicons/react/24/solid";
+import SmallTimeline from "../components/video/SmallTimeline.tsx";
+
 function VideoView() {
 
-    const player = useRef(null);
+    const player: any = useRef(null);
 
+    // Player states
     const [duration, setDuration] = useState(0);
     const [secondsProgressed, setSeconds] = useState(0);
+    const [playing, setPlaying] = useState(false);
+    const [muted, setMuted] = useState(false);
+    const [looping, setLooping] = useState(false);
+
+    // Other states
     const [video, setVideo] = useState(0);
 
     const url = "https://www.youtube.com/watch?v=";
 
     function changeVid(val: number) {
         setVideo(val);
+        setPlaying(false);
+        setSeconds(0);
     }
 
-    function handleDuration(d: any) {
+    function handleDuration(d: number) {
         setDuration(d);
     }
 
-    function handleProress(p: any) {
+    function handleProgress(p: any) {
         setSeconds(p.playedSeconds);
+    }
+
+    function handlePlaying(p: boolean) {
+        setPlaying(p);
+    }
+
+    function handleMuted(m: boolean) {
+        setMuted(m);
+    }
+
+    function handleLooping(l: boolean) {
+        setLooping(l);
+    }
+
+    function skipForward() {
+        if (player.current) {
+            let s = secondsProgressed + 5 < duration ? secondsProgressed + 5 : duration;
+
+            player.current.seekTo(s);
+            setSeconds(s);
+        }
+    }
+
+    function skipBackward() {
+        if (player.current) {
+            let s = secondsProgressed > 5 ? secondsProgressed - 5 : 0;
+
+            player.current.seekTo(s)
+            setSeconds(s);
+        }
+    }
+
+    function timelineCallback(secs: number) {
+        if (player.current) {
+            player.current.seekTo(secs);
+            setSeconds(secs)
+        }
     }
 
     function convertTime(seconds: number) {
@@ -79,14 +135,17 @@ function VideoView() {
                         </div>
                     </div>
 
+                    {/* Video player */}
                     <div className="w-full h-full flex justify-center">
                         <ReactPlayer width="500px" height="280px" url={url + data[video].id} ref={player}
-                                     onDuration={handleDuration}
-                                     onProgress={handleProress}/>
+                                     onDuration={handleDuration} onProgress={handleProgress}
+                                     onPause={() => handlePlaying(false)} onPlay={() => handlePlaying(true)}
+                                     playing={playing} volume={1} muted={muted} loop={looping} pip={false}/>
 
                     </div>
 
-                    <div className="w-full flex text-xl px-4">
+                    {/* Video info */}
+                    <div className="w-full flex px-5">
                         <p className="text-4-blue">{convertTime(secondsProgressed)}</p>
 
                         <div className="flex-1"/>
@@ -94,9 +153,48 @@ function VideoView() {
                         <p className="text-4-text-dim">{convertTime(duration)}</p>
                     </div>
 
-                    <div className="w-full flex px-2">
-                        <div className="px-5 bg-gray-500 h-5 flex-1">
-                            A timeline thing
+                    {/* Video timeline small */}
+                    <div className="w-full flex">
+
+                        <SmallTimeline duration={duration} seconds={secondsProgressed} callback={timelineCallback}/>
+
+                    </div>
+
+                    {/* Video controls */}
+                    <div className="w-full flex justify-center items-center py-2">
+
+                        <div className="flex gap-2">
+
+                            <div onClick={() => handleMuted(!muted)} className="vidbutton">
+                                {muted ? (
+                                    <SpeakerXMarkIcon/>
+                                ) : (
+                                    <SpeakerWaveIcon/>
+                                )}
+                            </div>
+
+                            <ArrowUturnLeftIcon className="vidbutton"/>
+                            <BackwardIcon className="vidbutton" onClick={skipBackward}/>
+
+                            <div onClick={() => handlePlaying(!playing)} className="vidbutton">
+                                {playing ? (
+                                    <PauseIcon/>
+                                ) : (
+                                    <PlayIcon/>
+                                )}
+                            </div>
+
+                            <ForwardIcon className="vidbutton" onClick={skipForward}/>
+                            <ArrowUturnRightIcon className="vidbutton"/>
+
+                            <div onClick={() => handleLooping(!looping)} className="vidbutton">
+                                {looping ? (
+                                    <ArrowPathIcon/>
+                                ) : (
+                                    <NoSymbolIcon/>
+                                )}
+                            </div>
+
                         </div>
                     </div>
                 </div>
