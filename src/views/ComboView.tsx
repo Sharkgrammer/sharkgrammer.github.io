@@ -72,9 +72,9 @@ function ComboView() {
             {/* NAV BUTTONS */}
             <div className="flex absolute bottom-2 right-2 text-white">
 
-                <ArrowLeftCircleIcon className={`nav-butt-${navDark ? "dark" : "light"}`} onClick={buttPrev}/>
+                <ArrowLeftCircleIcon className={`nav-butt-${navDark ? "dark" : "light"} ${view == 0 && "nav-butt-inactive"}`} onClick={buttPrev}/>
                 <HomeIcon className={`nav-butt-${navDark ? "dark" : "light"}`} onClick={homeView}/>
-                <ArrowRightCircleIcon className={`nav-butt-${navDark ? "dark" : "light"}`} onClick={buttNext}/>
+                <ArrowRightCircleIcon className={`nav-butt-${navDark ? "dark" : "light"} ${view == 4 && "nav-butt-inactive"}`} onClick={buttNext}/>
 
             </div>
 

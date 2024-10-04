@@ -80,3 +80,7 @@
 .nav-butt-dark {
     @apply size-8 cursor-pointer text-white hover:text-gray-200 active:text-blue-500;
 }
+
+.nav-butt-inactive {
+    @apply text-gray-500 hover:text-gray-500 active:text-gray-500 cursor-auto;
+}
