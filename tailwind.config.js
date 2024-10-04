@@ -50,6 +50,9 @@ export default {
                 '5-shadow': '#2f2f2f',
                 '5-text-light': '#a9a9aa'
             },
+            padding: {
+                '15': '60px',
+            },
             maxHeight: {
                 '5/6': '83.333333%',
             },

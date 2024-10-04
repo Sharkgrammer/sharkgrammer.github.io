@@ -17,6 +17,7 @@
 }
 
 .col4 {
+    @apply pl-15;
 }
 
 /* WATCH CSS */

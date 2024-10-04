@@ -5,12 +5,13 @@ interface JSONLine {
     bracket: boolean,
     bracketBack: boolean,
     colon: boolean,
-    comma: boolean
+    comma: boolean,
+    link: boolean
 }
 
 // Takes a correctly formatted JSON file and displays it to the end user.
 // The interface JSONLine contains all recognized keys that can be used to customize the display.
-function JSONFormat({data}: {data:any}) {
+function JSONFormat({data}: { data: any }) {
 
     return (
         <div className="w-full">
@@ -32,7 +33,11 @@ function JSONFormat({data}: {data:any}) {
                             )}
 
                             {line.value && (
-                                <span className="text-1-orange">"{line.value}"</span>
+                                line.link ? (
+                                    <a className="text-1-orange cursor-pointer select-auto" href={line.value}>"{line.value.replace("mailto:","")}"</a>
+                                ) : (
+                                    <span className="text-1-orange">"{line.value}"</span>
+                                )
                             )}
 
                             {line.bracket && (

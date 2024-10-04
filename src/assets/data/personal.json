@@ -16,13 +16,102 @@
       },
       {
         "title": "message",
-        "value": "This is a website!",
+        "value": "This is my portfolio!",
         "row": "col2",
         "colon": true,
         "comma": true
       },
       {
-        "title": "about me",
+        "title": "site",
+        "value": "The site is designed after popular apps",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "information",
+        "row": "col2",
+        "colon": true,
+        "bracket": true
+      },
+      {
+        "title": "stack",
+        "value": "Built with React JS & Tailwind CSS",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "scroll",
+        "value": "You can scroll to navigate, works best with a mouse",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "but",
+        "value": "Or use the nav buttons in the bottom right corner",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "row": "col2",
+        "bracketBack": true
+      },
+      {
+        "title": "question",
+        "row": "col2",
+        "colon": true,
+        "bracket": true
+      },
+      {
+        "title": "why",
+        "value": "Why make this site?",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "ans",
+        "value": "I thought it would be fun",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "ans2",
+        "value": "And a good showcase of my work",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "row": "col2",
+        "bracketBack": true,
+        "comma": true
+      },
+      {
+        "row": "col1",
+        "bracketBack": true
+      }
+    ]
+  },
+  {
+    "title": "author.json",
+    "lang": "JSON",
+    "data": [
+      {
+        "row": "col1",
+        "bracket": true
+      },
+      {
+        "title": "title",
+        "value": "Some information about me",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "information",
         "row": "col2",
         "colon": true,
         "bracket": true
@@ -35,8 +124,23 @@
         "comma": true
       },
       {
-        "title": "info",
-        "value": "I like to make things",
+        "title": "email",
+        "value": "mailto:danielkeanekelly@gmail.com",
+        "row": "col3",
+        "colon": true,
+        "comma": true,
+        "link": true
+      },
+      {
+        "title": "curr role",
+        "value": "Full Stack Developer",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "prev role",
+        "value": "Lecturer",
         "row": "col3",
         "colon": true
       },
@@ -46,30 +150,41 @@
         "comma": true
       },
       {
-        "title": "about the site",
+        "title": "links",
         "row": "col2",
         "colon": true,
         "bracket": true
       },
       {
-        "title": "info",
-        "value": "A showcase of my work",
+        "title": "github",
+        "value": "https://github.com/Sharkgrammer",
         "row": "col3",
         "colon": true,
-        "comma": true
+        "comma": true,
+        "link": true
       },
       {
-        "title": "stack",
-        "value": "Built with React & Tailwind",
+        "title": "linkedin",
+        "value": "https://www.linkedin.com/in/daniel-keane-kelly/",
         "row": "col3",
         "colon": true,
-        "comma": true
+        "comma": true,
+        "link": true
       },
       {
-        "title": "msg",
-        "value": "Hope you enjoy!",
+        "title": "youtube",
+        "value": "https://www.youtube.com/@danielkeanekelly",
         "row": "col3",
-        "colon": true
+        "colon": true,
+        "comma": true,
+        "link": true
+      },
+      {
+        "title": "kofi",
+        "value": "https://ko-fi.com/danielkeanekelly",
+        "row": "col3",
+        "colon": true,
+        "link": true
       },
       {
         "row": "col2",
@@ -82,7 +197,7 @@
     ]
   },
   {
-    "title": "something.json",
+    "title": "site.json",
     "lang": "JSON",
     "data": [
       {
@@ -90,24 +205,76 @@
         "bracket": true
       },
       {
-        "title": "greeting",
-        "value": "Hi!",
+        "title": "title",
+        "value": "Information about the site",
         "row": "col2",
         "colon": true,
         "comma": true
       },
       {
-        "title": "msg",
-        "value": "Coming soon!",
+        "title": "stack",
+        "value": "Built with React JS and Tailwind CSS",
         "row": "col2",
         "colon": true,
         "comma": true
       },
       {
-        "title": "msg2",
-        "value": "Not sure what goes here",
+        "title": "why",
+        "value": "I made watch faces look like apps before",
         "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "why2",
+        "value": "So I thought it would be fitting to make my site do the same",
+        "row": "col2",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "page inspirations",
+        "row": "col2",
+        "colon": true,
+        "bracket": true
+      },
+      {
+        "title": "personal",
+        "value": "VSCode",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "watches",
+        "value": "PowerPoint",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "projects",
+        "value": "Excel",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "videos",
+        "value": "Premiere Pro",
+        "row": "col3",
+        "colon": true,
+        "comma": true
+      },
+      {
+        "title": "repos",
+        "value": "Gmail",
+        "row": "col3",
         "colon": true
+      },
+      {
+        "row": "col2",
+        "bracketBack": true
       },
       {
         "row": "col1",

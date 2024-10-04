@@ -23,23 +23,23 @@ const router = createBrowserRouter([
             },
             {
                 path: "personal",
-                element: <PersonalView/>,
+                element: <PersonalView callback={() => {}}/>,
             },
             {
                 path: "watch",
-                element: <WatchView/>,
+                element: <WatchView callback={() => {}}/>,
             },
             {
                 path: "project",
-                element: <ProjectView/>,
+                element: <ProjectView callback={() => {}}/>,
             },
             {
                 path: "video",
-                element: <VideoView/>,
+                element: <VideoView callback={() => {}}/>,
             },
             {
                 path: "repo",
-                element: <RepoView/>,
+                element: <RepoView callback={() => {}}/>,
             },
         ],
     },
