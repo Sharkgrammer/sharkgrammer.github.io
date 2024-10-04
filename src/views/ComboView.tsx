@@ -20,8 +20,6 @@ function ComboView() {
         }
     }
 
-
-
     function callback(ready: any) {
         setCompReady(ready);
     }

@@ -78,11 +78,28 @@ function WatchView({callback}: { callback?: any }) {
                 callback({b: false, f: false});
                 break;
         }
+    }
 
+    // For basic clicks to work as intended
+    function startAnimation() {
+        if (blockScroll) return;
+
+        setSlideChange({forward: true, active: true});
+        setBlockScroll(true);
+
+        setTimeout(endAnimation, 500);
+    }
+
+    function endAnimation() {
+        setSlideChange({forward: true, active: false});
+
+        let s: number = slide == data.length - 1 ? 0 : slide + 1;
+        setSlide(s);
+        setTimeout(() => allowMoveAgain(s), 500);
     }
 
     return (
-        <div className="h-full bg-2-background font-semibold flex flex-col" onClick={startFAnim} onWheel={scroll}>
+        <div className="h-full bg-2-background font-semibold flex flex-col" onClick={startAnimation} onWheel={scroll}>
 
             {/* Top Pane */}
             <DocHeader title="Watch Face Presentation" colour="bg-2-primary"/>
