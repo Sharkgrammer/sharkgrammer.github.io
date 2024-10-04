@@ -15,7 +15,7 @@ import Mail from "../components/repo/Mail.tsx";
 import MailDetails from "../components/repo/MailDetails.tsx";
 import MailPill from "../components/repo/MailPill.tsx";
 
-function RepoView() {
+function RepoView({callback}: { callback?: any }) {
 
     const [data, setData] = useState([]);
     const [repo, setRepo] = useState(0);
@@ -46,6 +46,14 @@ function RepoView() {
         setShowRepo(false);
     }
 
+    function setCallback(val: boolean) {
+        callback({b: val, f: false})
+    }
+
+    useEffect(() => {
+        setCallback(true);
+    }, [])
+
     return (
         <div className="h-full bg-5-background font-semibold flex">
 
@@ -73,23 +81,23 @@ function RepoView() {
 
                 <div className="w-full flex flex-col">
                     <MailPill text="Inbox" active={true}>
-                        <EnvelopeIcon className="size-6" />
+                        <EnvelopeIcon className="size-6"/>
                     </MailPill>
 
                     <MailPill text="Starred" active={false}>
-                        <StarIcon className="size-6" />
+                        <StarIcon className="size-6"/>
                     </MailPill>
 
                     <MailPill text="Important" active={false}>
-                        <DocumentChartBarIcon className="size-6" />
+                        <DocumentChartBarIcon className="size-6"/>
                     </MailPill>
 
                     <MailPill text="Sent" active={false}>
-                        <PaperAirplaneIcon className="size-6" />
+                        <PaperAirplaneIcon className="size-6"/>
                     </MailPill>
 
                     <MailPill text="More" active={false}>
-                        <ChevronDownIcon className="size-6" />
+                        <ChevronDownIcon className="size-6"/>
                     </MailPill>
                 </div>
             </div>
@@ -97,7 +105,8 @@ function RepoView() {
             <div className="h-full w-4/5 flex flex-col">
 
                 <div className="px-2 py-5 h-full">
-                    <div className="h-full bg-5-pane-background-light rounded-2xl flex flex-col overflow-y-hidden">
+                    <div className="h-full bg-5-pane-background-light rounded-2xl flex flex-col overflow-y-hidden"
+                         onMouseEnter={() => setCallback(false)} onMouseLeave={() => setCallback(true)}>
 
                         <div className="flex px-2 p-2 gap-2">
                             <MailTab text="Primary" active={true}>

@@ -1,4 +1,4 @@
-import {useState, useRef} from "react";
+import {useState, useRef, useEffect} from "react";
 
 import data from "../assets/data/videos.json";
 
@@ -18,7 +18,7 @@ import {
 import SmallTimeline from "../components/video/SmallTimeline.tsx";
 import BigTimeline from "../components/video/BigTimeline.tsx";
 
-function VideoView() {
+function VideoView({callback}: { callback?: any }) {
 
     const player: any = useRef(null);
 
@@ -92,6 +92,10 @@ function VideoView() {
 
         return `${String(h).padStart(2, '0')};${String(m).padStart(2, '0')};${String(s).padStart(2, '0')}`;
     }
+
+    useEffect(() => {
+        callback({b: true, f: true})
+    }, [])
 
     return (
         <div className="w-full h-full font-semibold flex bg-4-background">

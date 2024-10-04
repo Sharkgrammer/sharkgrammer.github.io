@@ -1,20 +1,54 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import data from "../assets/data/personal.json";
 
 import TopTab from "../components/personal/TopTab.tsx";
 import JSONFormat from "../components/personal/JSONFormat.tsx";
 
-function PersonalView() {
+function PersonalView({callback}: { callback?: any }) {
 
     const [tab, setTab] = useState(0);
 
     function updateTab(val: number) {
-        setTab(val)
+        setTab(val);
     }
 
+    function scroll(e: any) {
+        if (e.deltaY > 0) {
+            nextTab();
+        } else {
+            prevTab();
+        }
+    }
+
+    function nextTab() {
+        if (tab + 1 == data.length - 1) {
+            callback({b: false, f: true});
+        } else {
+            callback({b: false, f: false});
+        }
+
+        let t: number = tab == data.length - 1 ? tab : tab + 1;
+        setTab(t)
+    }
+
+    function prevTab() {
+        if (tab - 1 == 0) {
+            callback({b: true, f: false});
+        } else {
+            callback({b: false, f: false});
+        }
+
+        let t: number = tab == 0 ? tab : tab - 1;
+        setTab(t)
+    }
+
+    useEffect(() => {
+        callback({b: false, f: false});
+    }, [])
+
     return (
-        <div className="text-white h-full bg-1-background flex flex-col">
+        <div className="text-white h-full bg-1-background flex flex-col" onWheel={scroll}>
 
             {/* The top file selector pane */}
             <div className="flex justify-start items-center">

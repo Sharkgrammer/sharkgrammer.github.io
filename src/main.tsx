@@ -9,6 +9,7 @@ import WatchView from "./views/WatchView.tsx";
 import ProjectView from "./views/ProjectView.tsx";
 import VideoView from "./views/VideoView.tsx";
 import RepoView from "./views/RepoView.tsx";
+import ComboView from "./views/ComboView.tsx";
 
 const router = createBrowserRouter([
     {
@@ -18,22 +19,26 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "",
+                element: <ComboView/>,
+            },
+            {
+                path: "personal",
                 element: <PersonalView/>,
             },
             {
-                path: "t1",
+                path: "watch",
                 element: <WatchView/>,
             },
             {
-                path: "t2",
+                path: "project",
                 element: <ProjectView/>,
             },
             {
-                path: "t3",
+                path: "video",
                 element: <VideoView/>,
             },
             {
-                path: "t4",
+                path: "repo",
                 element: <RepoView/>,
             },
         ],

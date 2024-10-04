@@ -62,6 +62,8 @@ export default {
             animation: {
                 'slide-up-2': 'slide-up 500ms',
                 'slide-out-2': 'slide-out 1000ms',
+                'slide-in-2': 'slide-in 500ms',
+                'slide-down-2': 'slide-down 1000ms',
             },
             keyframes: {
                 'slide-up': {
@@ -72,6 +74,15 @@ export default {
                     '0%': {opacity: 1, transform: 'translateX(0%)'},
                     '50%': {opacity: 0, transform: 'translateX(100%)'},
                     '100%': {opacity: 0, transform: 'translateX(100%)'},
+                },
+                'slide-in': {
+                    '0%': {opacity: 0, transform: 'translateX(100%)'},
+                    '100%': {opacity: 1, transform: 'translateX(0%)'},
+                },
+                'slide-down': {
+                    '0%': {opacity: 1, transform: 'translateY(0%)'},
+                    '50%': {opacity: 0, transform: 'translateY(100%)'},
+                    '100%': {opacity: 0, transform: 'translateY(100%)'},
                 },
                 'slide-change': {
                     '0%': {opacity: 1, transform: 'translateX(0%)'},

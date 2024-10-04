@@ -23,7 +23,7 @@ interface cells {
     site: cell
 }
 
-function ProjectView() {
+function ProjectView({callback}: { callback?: any }) {
 
     let defCells: cells = {
         title: {h: 3, w: 3, l: 1, t: 1},
@@ -35,6 +35,14 @@ function ProjectView() {
 
     const [tab, setTab] = useState(0);
     const [cellWidths, setCellWidths] = useState(defCells);
+
+    function scroll(e: any) {
+        if (e.deltaY > 0) {
+            nextTab();
+        } else {
+            prevTab();
+        }
+    }
 
     function updateTab(val: number) {
         setTab(val);
@@ -49,15 +57,39 @@ function ProjectView() {
     }
 
     // Generates cells to just out of the users viewport
-    function getGenWidth(){
+    function getGenWidth() {
         return Math.ceil(window.innerWidth / 80);
     }
 
-    function getGenHeight(){
+    function getGenHeight() {
         return Math.ceil(window.innerHeight / 32);
     }
 
+    function nextTab() {
+        if (tab + 1 == data.length - 1) {
+            callback({b: false, f: true});
+        } else {
+            callback({b: false, f: false});
+        }
+
+        let t: number = tab == data.length - 1 ? tab : tab + 1;
+        setTab(t)
+    }
+
+    function prevTab() {
+        if (tab - 1 == 0) {
+            callback({b: true, f: false});
+        } else {
+            callback({b: false, f: false});
+        }
+
+        let t: number = tab == 0 ? tab : tab - 1;
+        setTab(t)
+    }
+
     useEffect(() => {
+
+        callback({b: true, f: false});
 
         if (!data[tab].site) {
             defCells.repo.t = 5;
@@ -66,10 +98,10 @@ function ProjectView() {
         }
 
         setCellWidths(defCells);
-    });
+    }, []);
 
     return (
-        <div className="h-full bg-3-background font-semibold flex flex-col">
+        <div className="h-full bg-3-background font-semibold flex flex-col" onWheel={scroll}>
 
             {/* Top Pane */}
             <DocHeader title="Interesting-Projects-Sheet.xlsx" colour="bg-3-primary"/>
@@ -97,8 +129,8 @@ function ProjectView() {
                         <p className="text-base">{data[tab].desc}</p>
 
                         {data[tab].desc2 && (
-                            <p className="text-base border-t border-black pt-1" >{data[tab].desc2}</p>
-                            )}
+                            <p className="text-base border-t border-black pt-1">{data[tab].desc2}</p>
+                        )}
                     </div>
                 </PivotPanel>
 

@@ -34,8 +34,6 @@ function BigTimeline({duration, seconds, title, muted, callback, timeFormat}: {
             }
 
             setWidth(w);
-
-            console.log(w);
         }
     }, [seconds])
 
