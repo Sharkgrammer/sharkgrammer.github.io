@@ -7,7 +7,7 @@ function Slide({data}: {data:any}) {
                 <h1 className="text-3xl font-bold">{data.title}</h1>
             </div>
 
-            <div className="grid grid-cols-3 px-2 w-full pb-2">
+            <div className="grid grid-cols-3 px-2 w-full pb-2 gap-5">
 
                 {data.faces.map((face: any, index: number) => (
                     <div className="text-center h-full px-5 flex flex-col gap-2" key={index}>
