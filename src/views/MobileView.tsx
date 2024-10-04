@@ -7,8 +7,6 @@ import ReactPlayer from "react-player/youtube";
 
 function MobileView() {
 
-    console.log(videoData[0]);
-
     // This site is only a bare bones version of the main site
     // Because of this, it'll only display what it needs to and ignore the rest
     // It'll also access data from the desktop variant in ways it probably shouldn't
