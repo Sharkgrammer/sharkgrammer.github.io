@@ -46,6 +46,9 @@ function ProjectView({callback}: { callback?: any }) {
 
     function updateTab(val: number) {
         setTab(val);
+
+        if (val == data.length - 1) callback({b: false, f: true});
+        if (val == 0) callback({b: true, f: false});
     }
 
     function openGitHub() {

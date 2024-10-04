@@ -65,7 +65,7 @@ function BigTimeline({duration, seconds, title, muted, callback, timeFormat}: {
 
                 <div className="flex-1  w-full flex ">
 
-                    <div className="min-w-[208px] pl-2 text-sm text-4-blue">
+                    <div className="min-w-[208px] pl-2 text-sm text-4-blue select-none">
                         {timeFormat(seconds)}
                     </div>
 
@@ -90,7 +90,7 @@ function BigTimeline({duration, seconds, title, muted, callback, timeFormat}: {
                 </div>
 
                 <div className="w-full">
-                    <div className="w-full">
+                    <div className="w-full select-none">
                         <TimelinePart title={title} desc="V1" col="bg-4-purple"/>
                         <TimelinePart title={`Audio: ${muted ? "Muted" : "Playing"}`} desc="A1" col="bg-4-blue-light"/>
                     </div>

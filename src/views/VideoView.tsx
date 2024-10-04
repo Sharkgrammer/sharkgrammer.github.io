@@ -150,7 +150,7 @@ function VideoView({callback}: { callback?: any }) {
                     </div>
 
                     {/* Video info */}
-                    <div className="w-full flex px-5">
+                    <div className="w-full flex px-5 select-none">
                         <p className="text-4-blue">{convertTime(secondsProgressed)}</p>
 
                         <div className="flex-1"/>
