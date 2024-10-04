@@ -1,16 +1,18 @@
 import {ArrowLeftCircleIcon, ArrowRightCircleIcon, HomeIcon} from "@heroicons/react/24/outline";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import PersonalView from "./PersonalView.tsx";
 import WatchView from "./WatchView.tsx";
 import ProjectView from "./ProjectView.tsx";
 import VideoView from "./VideoView.tsx";
 import RepoView from "./RepoView.tsx";
+import MobileView from "./MobileView.tsx";
 
 function ComboView() {
 
     const [navDark, setNavDark] = useState(true);
     const [view, setView] = useState(0);
     const [compReady, setCompReady] = useState({b: false, f: false});
+    const [mobileSite, setMobileSite] = useState(true);
 
     function scroll(e: any) {
         if (e.deltaY > 0) {
@@ -67,39 +69,48 @@ function ComboView() {
         }
     }
 
+    useEffect(() => {
+        // Sadly my app designs won't support a mobile device
+        // Switch to mobile design instead
+        if (window.innerWidth >= 1024) setMobileSite(false);
+    })
+
     return (
-        <div className="min-h-screen h-screen" onWheel={scroll} >
-            {/* NAV BUTTONS */}
-            <div className="flex absolute bottom-2 right-2 text-white">
+        <div className="min-h-screen h-screen" onWheel={scroll}>
 
-                <ArrowLeftCircleIcon className={`nav-butt-${navDark ? "dark" : "light"} ${view == 0 && "nav-butt-inactive"}`} onClick={buttPrev}/>
-                <HomeIcon className={`nav-butt-${navDark ? "dark" : "light"}`} onClick={homeView}/>
-                <ArrowRightCircleIcon className={`nav-butt-${navDark ? "dark" : "light"} ${view == 4 && "nav-butt-inactive"}`} onClick={buttNext}/>
+            {mobileSite ? (
+                <div>
+                    {/* MOBILE CONTENT */}
+                    <MobileView/>
+                </div>
+            ) : (
+                <div className="h-full w-full">
+                    {/* NAV BUTTONS */}
+                    <div className="flex absolute bottom-2 right-2 text-white">
+                        <ArrowLeftCircleIcon
+                            className={`nav-butt-${navDark ? "dark" : "light"} ${view == 0 && "nav-butt-inactive"}`}
+                            onClick={buttPrev}/>
+                        <HomeIcon className={`nav-butt-${navDark ? "dark" : "light"}`} onClick={homeView}/>
+                        <ArrowRightCircleIcon
+                            className={`nav-butt-${navDark ? "dark" : "light"} ${view == 4 && "nav-butt-inactive"}`}
+                            onClick={buttNext}/>
+                    </div>
 
-            </div>
+                    {/* DESKTOP CONTENT */}
+                    {view == 0 && (
+                        <PersonalView callback={callback}/>
+                    ) || view == 1 && (
+                        <WatchView callback={callback}/>
+                    ) || view == 2 && (
+                        <ProjectView callback={callback}/>
+                    ) || view == 3 && (
+                        <VideoView callback={callback}/>
+                    ) || view == 4 && (
+                        <RepoView callback={callback}/>
+                    )}
 
-            {/* DESKTOP CONTENT */}
-            <div className="h-full w-full">
-
-                {view == 0 && (
-                    <PersonalView callback={callback}/>
-                ) || view == 1 && (
-                    <WatchView callback={callback}/>
-                ) || view == 2 && (
-                    <ProjectView callback={callback}/>
-                ) || view == 3 && (
-                    <VideoView callback={callback}/>
-                ) || view == 4 && (
-                    <RepoView callback={callback}/>
-                )}
-
-            </div>
-
-
-            {/* MOBILE CONTENT */}
-            <div>
-
-            </div>
+                </div>
+            )}
 
         </div>
     )
