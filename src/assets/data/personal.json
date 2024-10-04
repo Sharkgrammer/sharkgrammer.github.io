@@ -56,7 +56,8 @@
       },
       {
         "row": "col2",
-        "bracketBack": true
+        "bracketBack": true,
+        "comma": true
       },
       {
         "title": "question",
@@ -86,8 +87,7 @@
       },
       {
         "row": "col2",
-        "bracketBack": true,
-        "comma": true
+        "bracketBack": true
       },
       {
         "row": "col1",
