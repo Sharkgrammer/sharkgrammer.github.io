@@ -62,7 +62,7 @@ function RepoView({callback}: { callback?: any }) {
 
                 <div className="flex items-center justify-center">
 
-                    <div className="flex">
+                    <div className="flex cursor-pointer" onClick={closeDetails}>
                         <img src={github} className="w-16"/>
                         <div className="flex items-center p-2">
                             <span className="text-3xl select-none">Repos</span>
@@ -109,10 +109,12 @@ function RepoView({callback}: { callback?: any }) {
                          onMouseEnter={() => setCallback(false)} onMouseLeave={() => setCallback(true)}>
 
                         <div className="flex px-2 p-2 gap-2">
-                            <MailTab text="Primary" active={true}>
-                                <HomeIcon className="size-5"/>
-                            </MailTab>
-                            <MailTab text="Promitions" active={false}>
+                            <div onClick={closeDetails}>
+                                <MailTab text="Primary" active={true}>
+                                    <HomeIcon className="size-5"/>
+                                </MailTab>
+                            </div>
+                            <MailTab text="Promotions" active={false}>
                                 <CreditCardIcon className="size-5"/>
                             </MailTab>
                             <MailTab text="Social" active={false}>

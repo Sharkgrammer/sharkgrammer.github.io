@@ -34,6 +34,14 @@ function VideoView({callback}: { callback?: any }) {
 
     const url = "https://www.youtube.com/watch?v=";
 
+    function nextVid() {
+        changeVid(video == data.length - 1 ? 0 : video + 1);
+    }
+
+    function prevVid() {
+        changeVid(video == 0 ? data.length - 1 : video - 1);
+    }
+
     function changeVid(val: number) {
         setVideo(val);
         setPlaying(false);
@@ -178,7 +186,7 @@ function VideoView({callback}: { callback?: any }) {
                                 )}
                             </div>
 
-                            <ArrowUturnLeftIcon className="vid-button"/>
+                            <ArrowUturnLeftIcon className="vid-button" onClick={prevVid}/>
                             <BackwardIcon className="vid-button" onClick={skipBackward}/>
 
                             <div onClick={() => handlePlaying(!playing)} className="vid-button">
@@ -190,7 +198,7 @@ function VideoView({callback}: { callback?: any }) {
                             </div>
 
                             <ForwardIcon className="vid-button" onClick={skipForward}/>
-                            <ArrowUturnRightIcon className="vid-button"/>
+                            <ArrowUturnRightIcon className="vid-button" onClick={nextVid}/>
 
                             <div onClick={() => handleLooping(!looping)} className="vid-button">
                                 {looping ? (
