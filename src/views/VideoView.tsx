@@ -101,14 +101,19 @@ function VideoView({callback}: { callback?: any }) {
         return `${String(h).padStart(2, '0')};${String(m).padStart(2, '0')};${String(s).padStart(2, '0')}`;
     }
 
+    function setCallback(val: boolean) {
+        callback({b: val, f: val})
+    }
+
     useEffect(() => {
-        callback({b: true, f: true})
+        setCallback(true)
     }, [])
 
     return (
         <div className="w-full h-full font-semibold flex bg-4-background">
 
-            <div className="w-3/5 h-full flex flex-col vid-border">
+            <div className="w-3/5 h-full flex flex-col vid-border"
+                 onMouseEnter={() => setCallback(false)} onMouseLeave={() => setCallback(true)}>
 
                 <div className="p-2">
                     <div className="flex gap-2">
