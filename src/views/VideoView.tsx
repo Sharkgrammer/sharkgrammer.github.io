@@ -118,7 +118,7 @@ function VideoView({callback}: { callback?: any }) {
                     </div>
                 </div>
 
-                <div className="h-full p-2">
+                <div className="h-full p-2 overflow-y-auto">
                     <div className="h-full border border-4-shadow-light flex flex-col">
 
                         <div className="w-full grid grid-cols-2">
