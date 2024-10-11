@@ -52,14 +52,6 @@ function SmallTimeline({duration, seconds, callback}: { duration: number, second
         setDragging(false);
     }
 
-    /*
-    function temp(e:any){
-        let rect = e.currentTarget.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-
-        console.log(x);
-    }*/
-
     return (
         <div className="px-5 flex-1">
 
@@ -69,7 +61,7 @@ function SmallTimeline({duration, seconds, callback}: { duration: number, second
                     <Draggable position={position} onStart={startDrag} onStop={stopDrag} axis="x"
                                bounds={{top: 0, left: 0, right: width, bottom: 0}}
                                nodeRef={nodeRef} onDrag={handleDrag}>
-                        <div ref={nodeRef} className="select-none cursor-pointer w-fit">
+                        <div ref={nodeRef} className="select-none w-fit cursor-grab active:cursor-grabbing">
                             <img src={pointer} className="w-5 pointer-events-none"/>
                         </div>
                     </Draggable>

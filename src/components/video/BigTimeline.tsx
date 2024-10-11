@@ -75,9 +75,8 @@ function BigTimeline({duration, seconds, title, muted, callback, timeFormat}: {
                             <Draggable position={position} onStart={startDrag} onStop={stopDrag} axis="x"
                                        bounds={{top: 0, left: 0, right: width, bottom: 0}}
                                        nodeRef={nodeRef} onDrag={handleDrag}>
-                                <div ref={nodeRef} className="select-none cursor-pointer w-fit">
+                                <div ref={nodeRef} className="select-none w-fit cursor-grab active:cursor-grabbing">
                                     <img src={pointer} className="w-3 pointer-events-none"/>
-
 
                                     <div className="ml-[5px] -mt-1 h-screen w-0.5 bg-4-blue absolute"></div>
                                 </div>
