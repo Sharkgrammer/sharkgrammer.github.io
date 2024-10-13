@@ -14,10 +14,6 @@ function MobileView() {
         return watchData[0].faces.concat(watchData[1].faces, watchData[2].faces);
     }
 
-    function openGithub(url: string) {
-        window.open(url);
-    }
-
     return (
         <div className="w-full h-full min-h-screen bg-1-pane-background flex justify-center text-white">
             <div className="w-full md:w-2/3 h-full flex flex-col gap-5 py-5 px-5">
@@ -35,7 +31,7 @@ function MobileView() {
                             <h2>This the mobile version.</h2>
                         </div>
 
-                        <div className="bg-1-text-dim w-full h-0.5" />
+                        <div className="bg-1-text-dim w-full h-0.5"/>
 
                         <div className="px-2 text-1-orange">
                             <h4>The desktop site is based off of popular apps.</h4>
@@ -67,9 +63,8 @@ function MobileView() {
 
                     <div className="grid grid-cols-1 gap-2">
                         {projectData.map((proj: any, index: number) => (
-                            <div key={index}
-                                 className="border-1-text-dim hover:border-white border rounded-2xl overflow-hidden cursor-pointer"
-                                 onClick={() => openGithub(proj.repo)}>
+                            <a key={index} href={proj.repo}
+                               className="border-1-text-dim hover:border-white border rounded-2xl overflow-hidden cursor-pointer">
 
                                 <div className="px-2 flex flex-col gap-1 py-2">
                                     <h4 className="text-2xl font-bold">{proj.title}</h4>
@@ -79,7 +74,7 @@ function MobileView() {
 
                                 <img src={proj.img}/>
 
-                            </div>
+                            </a>
                         ))}
                     </div>
 
@@ -93,7 +88,7 @@ function MobileView() {
                         {videoData.map((vid: any, index: number) => (
                             <div key={index} className="border-1-text-dim border rounded-2xl min-h-60 overflow-hidden">
                                 <ReactPlayer width="100%" height="100%" pip={false} controls={true}
-                                             url={`https://www.youtube.com/watch?v=${vid.id}`} />
+                                             url={`https://www.youtube.com/watch?v=${vid.id}`}/>
                             </div>
                         ))}
                     </div>

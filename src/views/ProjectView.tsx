@@ -51,14 +51,6 @@ function ProjectView({callback}: { callback?: any }) {
         if (val == 0) callback({b: true, f: false});
     }
 
-    function openGitHub() {
-        window.open(data[tab].repo);
-    }
-
-    function openSite() {
-        if (data[tab].site) window.open(data[tab].site);
-    }
-
     // Generates cells to just out of the users viewport
     function getGenWidth() {
         return Math.ceil(window.innerWidth / 80);
@@ -147,20 +139,20 @@ function ProjectView({callback}: { callback?: any }) {
 
                 <PivotPanel data={cellWidths.repo}>
 
-                    <div className="h-full w-full flex items-center justify-center cursor-pointer hover:bg-gray-100"
-                         onClick={openGitHub}>
+                    <a className="h-full w-full flex items-center justify-center cursor-pointer hover:bg-gray-100"
+                       href={data[tab].repo}>
                         <p className="underline text-blue-400 cursor-pointer">Click for GitHub</p>
-                    </div>
+                    </a>
 
                 </PivotPanel>
 
                 {data[tab].site && (
                     <PivotPanel data={cellWidths.site}>
 
-                        <div className="h-full w-full flex items-center justify-center cursor-pointer hover:bg-gray-100"
-                             onClick={openSite}>
+                        <a className="h-full w-full flex items-center justify-center cursor-pointer hover:bg-gray-100"
+                           href={data[tab].site}>
                             <p className="underline text-blue-400">Click to Visit Site</p>
-                        </div>
+                        </a>
 
                     </PivotPanel>
                 )}

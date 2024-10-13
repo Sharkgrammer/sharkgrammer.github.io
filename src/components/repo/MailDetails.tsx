@@ -29,10 +29,6 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
         return `${hours}:${minutes}:${seconds}, ${day}/${month}/${year}`;
     }
 
-    function openGitHub() {
-        window.open(data.html_url);
-    }
-
     return (
         <div className="w-full h-full text-black bg-white flex flex-col gap-2 py-5">
 
@@ -98,11 +94,11 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
 
 
                     <div className="pt-4">
-                        <div className="w-fit flex gap-2 border border-black rounded-2xl py-1 px-3
-                             hover:bg-gray-100 cursor-pointer" onClick={openGitHub}>
+                        <a className="w-fit flex gap-2 border border-black rounded-2xl py-1 px-3
+                             hover:bg-gray-100 cursor-pointer" href={data.html_url}>
                             <CursorArrowRaysIcon className="size-6"/>
                             <span className="h-6 select-none">Visit Repo</span>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
