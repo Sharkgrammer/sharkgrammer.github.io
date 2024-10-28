@@ -5,8 +5,10 @@ function TopTab({text, active, runClick, lang}: { text: string, active: boolean,
         switch (lang) {
             case "JSON":
                 return "{ }";
+            case "YAML":
+                return "[ ]";
             default:
-                return "";
+                return " ";
         }
     }
 

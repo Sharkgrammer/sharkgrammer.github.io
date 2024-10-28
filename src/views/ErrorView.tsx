@@ -1,5 +1,5 @@
 import {useRouteError} from "react-router-dom";
-import JSONFormat from "../components/personal/JSONFormat.tsx";
+import Formatter from "../components/personal/Formatter.tsx";
 
 function ErrorView() {
     const error: any = useRouteError();
@@ -42,7 +42,7 @@ function ErrorView() {
     return (
         <div className="text-white min-h-screen h-full bg-1-pane-background">
             <div className="flex-1 flex flex-col items-start lg:text-2xl w-full select-none">
-                <JSONFormat data={getData()}/>
+                <Formatter data={getData()} lang="JSON"/>
             </div>
         </div>
     )

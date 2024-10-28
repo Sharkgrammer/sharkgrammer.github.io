@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import data from "../assets/data/personal.json";
 
 import TopTab from "../components/personal/TopTab.tsx";
-import JSONFormat from "../components/personal/JSONFormat.tsx";
+import Formatter from "../components/personal/Formatter.tsx";
 
 function PersonalView({callback}: { callback?: any }) {
 
@@ -66,7 +66,7 @@ function PersonalView({callback}: { callback?: any }) {
 
             {/* Center pane */}
             <div className="flex-1 bg-1-pane-background flex flex-col items-start text-2xl w-full select-none">
-                <JSONFormat data={data[tab].data}/>
+                <Formatter data={data[tab].data}  lang={data[tab].lang}/>
             </div>
 
         </div>

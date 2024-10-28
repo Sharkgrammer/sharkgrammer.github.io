@@ -281,5 +281,84 @@
         "bracketBack": true
       }
     ]
+  },
+  {
+    "title": "personal.yaml",
+    "lang": "YAML",
+    "data": [
+      {
+        "title": "information",
+        "row": "col1",
+        "colon": true
+      },
+      {
+        "title": "fav-animal",
+        "value": "Sharks",
+        "row": "col2",
+        "colon": true
+      },
+      {
+        "title": "interests",
+        "row": "col2",
+        "colon": true
+      },
+      {
+        "value": "programming",
+        "row": "col3",
+        "dash": true
+      },
+      {
+        "value": "reading",
+        "row": "col3",
+        "dash": true
+      },
+      {
+        "value": "crochet",
+        "row": "col3",
+        "dash": true
+      },
+      {},
+      {
+        "title": "fav-reading",
+        "row": "col2",
+        "colon": true
+      },
+      {
+        "title": "book",
+        "value": "rhythm of war",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "title": "author",
+        "value": "brandon sanderson",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "title": "genre",
+        "value": "high fantasy",
+        "row": "col3",
+        "colon": true
+      },
+      {},
+      {
+        "title": "why-yaml",
+        "row": "col2",
+        "colon": true
+      },
+      {
+        "title": "clockface.json",
+        "value": "watch face got complaints",
+        "row": "col3",
+        "colon": true
+      },
+      {
+        "title": "devs",
+        "value": "some devs prefered YAML to JSON",
+        "row": "col3",
+        "colon": true
+      }
+    ]
   }
 ]
