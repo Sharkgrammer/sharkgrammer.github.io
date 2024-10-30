@@ -14,6 +14,7 @@ export default {
                 '1-text-dim': '#626269',
                 '1-blue': '#9cdcfe',
                 '1-orange': '#ce9178',
+                '1-orange-dark': '#B06F56',
                 '1-yellow': '#bdba34',
 
                 // COLOURS FOR WATCH - POWERPOINT BASED

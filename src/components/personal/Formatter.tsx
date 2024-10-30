@@ -51,7 +51,7 @@ function Formatter({data, lang}: { data: any, lang: string }) {
 
                             {line.value && (
                                 line.link ? (
-                                    <a className="text-1-orange cursor-pointer select-auto"
+                                    <a className="text-1-orange cursor-pointer select-auto hover:text-1-orange-dark"
                                        href={line.value}>{commaWrap(line.value.replace("mailto:", ""))}</a>
                                 ) : (
                                     <span className="text-1-orange">{commaWrap(line.value)}</span>
