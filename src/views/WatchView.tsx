@@ -6,7 +6,7 @@ import SlidePreview from "../components/watch/SlidePreview.tsx";
 import DocHeader from "../components/common/DocHeader.tsx";
 import DocTabs from "../components/common/DocTabs.tsx";
 
-function WatchView({callback}: { callback?: any }) {
+function WatchView({callback, end}: { callback?: any, end?: boolean  }) {
 
     const [slide, setSlide] = useState(0);
     const [slideChange, setSlideChange] = useState({forward: true, active: false});
@@ -14,6 +14,14 @@ function WatchView({callback}: { callback?: any }) {
 
     useEffect(() => {
         callback({b: true, f: false});
+
+        if (end) {
+            setSlide(data.length - 1);
+            callback({b: false, f: true});
+        } else {
+            callback({b: true, f: false});
+        }
+
     }, [])
 
     function scroll(e: any) {

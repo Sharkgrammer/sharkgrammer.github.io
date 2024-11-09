@@ -5,7 +5,7 @@ import data from "../assets/data/personal.json";
 import TopTab from "../components/personal/TopTab.tsx";
 import Formatter from "../components/personal/Formatter.tsx";
 
-function PersonalView({callback}: { callback?: any }) {
+function PersonalView({callback, end}: { callback?: any, end?: boolean }) {
 
     const [tab, setTab] = useState(0);
 
@@ -46,7 +46,12 @@ function PersonalView({callback}: { callback?: any }) {
     }
 
     useEffect(() => {
-        callback({b: false, f: false});
+        if (end) {
+            setTab(data.length - 1);
+            callback({b: false, f: true});
+        } else {
+            callback({b: false, f: false});
+        }
     }, [])
 
     return (
@@ -66,7 +71,7 @@ function PersonalView({callback}: { callback?: any }) {
 
             {/* Center pane */}
             <div className="flex-1 bg-1-pane-background flex flex-col items-start text-2xl w-full select-none">
-                <Formatter data={data[tab].data}  lang={data[tab].lang}/>
+                <Formatter data={data[tab].data} lang={data[tab].lang}/>
             </div>
 
         </div>

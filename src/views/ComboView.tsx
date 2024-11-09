@@ -1,5 +1,5 @@
 import {ArrowLeftCircleIcon, ArrowRightCircleIcon, HomeIcon} from "@heroicons/react/24/outline";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import PersonalView from "./PersonalView.tsx";
 import WatchView from "./WatchView.tsx";
 import ProjectView from "./ProjectView.tsx";
@@ -9,9 +9,11 @@ import MobileView from "./MobileView.tsx";
 
 function ComboView() {
 
+    const backwards = useRef<boolean>(false);
+    const compReady = useRef({b: false, f: false});
+
     const [navDark, setNavDark] = useState(true);
     const [view, setView] = useState(0);
-    const [compReady, setCompReady] = useState({b: false, f: false});
     const [mobileSite, setMobileSite] = useState(true);
 
     function scroll(e: any) {
@@ -23,7 +25,7 @@ function ComboView() {
     }
 
     function callback(ready: any) {
-        setCompReady(ready);
+        compReady.current = ready;
     }
 
     function homeView() {
@@ -32,25 +34,29 @@ function ComboView() {
     }
 
     function nextView() {
-        if (compReady.f) {
+        if (compReady.current.f) {
             buttNext();
         }
     }
 
     function buttNext() {
+        backwards.current = false;
+
         let v = view == 4 ? view : view + 1;
         setView(v);
         setNav(v);
     }
 
     function prevView() {
-        if (compReady.b) {
+        if (compReady.current.b) {
             buttPrev();
         }
     }
 
     function buttPrev() {
-        let v = view == 0 ? view : view - 1
+        backwards.current = true;
+
+        let v = view == 0 ? view : view - 1;
         setView(v);
         setNav(v);
     }
@@ -98,11 +104,11 @@ function ComboView() {
 
                     {/* DESKTOP CONTENT */}
                     {view == 0 && (
-                        <PersonalView callback={callback}/>
+                        <PersonalView callback={callback} end={backwards.current}/>
                     ) || view == 1 && (
-                        <WatchView callback={callback}/>
+                        <WatchView callback={callback} end={backwards.current}/>
                     ) || view == 2 && (
-                        <ProjectView callback={callback}/>
+                        <ProjectView callback={callback} end={backwards.current}/>
                     ) || view == 3 && (
                         <VideoView callback={callback}/>
                     ) || view == 4 && (

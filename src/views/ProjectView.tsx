@@ -23,7 +23,7 @@ interface cells {
     site: cell
 }
 
-function ProjectView({callback}: { callback?: any }) {
+function ProjectView({callback, end}: { callback?: any, end?: boolean }) {
 
     let defCells: cells = {
         title: {h: 3, w: 3, l: 1, t: 1},
@@ -84,7 +84,12 @@ function ProjectView({callback}: { callback?: any }) {
 
     useEffect(() => {
 
-        callback({b: true, f: false});
+        if (end) {
+            setTab(data.length - 1);
+            callback({b: false, f: true});
+        } else {
+            callback({b: true, f: false});
+        }
 
         if (!data[tab].site) {
             defCells.repo.t = 5;
