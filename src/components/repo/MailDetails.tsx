@@ -10,14 +10,14 @@ import {ArrowUturnLeftIcon} from "@heroicons/react/24/solid";
 
 function MailDetails({data, callback}: { data: any, callback: any }) {
 
-    function formatDate(date: string, justDate:boolean) {
+    function formatDate(date: string, justDate: boolean) {
         const d = new Date(date);
 
         const day: string = String(d.getDate()).padStart(2, '0');
         const month: string = String(d.getMonth() + 1).padStart(2, '0');
         const year: string = String(d.getFullYear()).slice(-2);
 
-        if (justDate){
+        if (justDate) {
             return `${day}/${month}/${year}`;
         }
 
@@ -86,7 +86,7 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
                     <span>The repo is programmed in {data.language}</span>
 
                     {data.stargazers_count > 0 && (
-                        <span>It has {data.stargazers_count} stars</span>
+                        <span>It has {data.stargazers_count} star{data.stargazers_count > 1 && "s"}</span>
                     )}
 
                     <span>Date updated: {formatDate(data.updated_at, true)}</span>
