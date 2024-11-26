@@ -61,7 +61,7 @@ function ProjectView({callback, end}: { callback?: any, end?: boolean }) {
     }
 
     function nextTab() {
-        if (tab + 1 == data.length - 1) {
+        if (tab == data.length - 1) {
             callback({b: false, f: true});
         } else {
             callback({b: false, f: false});
