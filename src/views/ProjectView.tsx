@@ -72,7 +72,7 @@ function ProjectView({callback, end}: { callback?: any, end?: boolean }) {
     }
 
     function prevTab() {
-        if (tab - 1 == 0) {
+        if (tab == 0) {
             callback({b: true, f: false});
         } else {
             callback({b: false, f: false});
