@@ -23,7 +23,7 @@ function Mail({data}: { data: any }) {
 
                 <ChatBubbleBottomCenterTextIcon className="mail-icon"/>
 
-                <span className="whitespace-nowrap">{data.name.replaceAll("-", " ")}</span>
+                <span className="whitespace-nowrap first-letter:capitalize">{data.name.replaceAll("-", " ")}</span>
                 <span> - </span>
                 <span className="text-gray-500 whitespace-nowrap truncate text-ellipsis">{data.description}</span>
 

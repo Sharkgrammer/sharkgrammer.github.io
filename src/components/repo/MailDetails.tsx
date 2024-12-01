@@ -40,7 +40,7 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
                                              onClick={callback}/>
                     </div>
 
-                    <span className="text-2xl font-bold">{data.name.replaceAll("-", " ")}</span>
+                    <span className="text-2xl font-bold first-letter:capitalize">{data.name.replaceAll("-", " ")}</span>
                 </div>
 
                 <div className="flex-1"/>

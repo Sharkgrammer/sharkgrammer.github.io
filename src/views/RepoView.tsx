@@ -24,7 +24,7 @@ function RepoView({callback}: { callback?: any }) {
     async function getRepoData() {
         // This works fine for now.
         // Since this is personal and I currently have 30-something public repos, I don't need to code it to paginate
-        const response = await fetch("https://api.github.com/users/Sharkgrammer/repos?per_page=100&sort=updated&order=desc");
+        const response = await fetch("https://api.github.com/users/Sharkgrammer/repos?per_page=100&sort=pushed&order=desc");
 
         if (response.ok) {
             let res = await response.json();
