@@ -5,7 +5,6 @@ import {
     PrinterIcon,
     StarIcon
 } from "@heroicons/react/24/outline";
-import profile from "../../assets/img/me.png";
 import {ArrowUturnLeftIcon} from "@heroicons/react/24/solid";
 
 function MailDetails({data, callback}: { data: any, callback: any }) {
@@ -55,7 +54,7 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
             <div className="flex">
 
                 <div className="flex px-5 items-center gap-5">
-                    <img src={profile} className="w-12 h-12 rounded-full"/>
+                    <img src={data.owner.avatar_url} className="w-12 h-12 rounded-full"/>
 
                     <div className="">
                         <p><span className={"font-bold"}>Daniel Keane Kelly</span> <span
@@ -89,8 +88,9 @@ function MailDetails({data, callback}: { data: any, callback: any }) {
                         <span>It has {data.stargazers_count} star{data.stargazers_count > 1 && "s"}</span>
                     )}
 
-                    <span>Date updated: {formatDate(data.updated_at, true)}</span>
                     <span>Date created: {formatDate(data.created_at, true)}</span>
+                    <span>Last update: {formatDate(data.updated_at, true)}</span>
+                    <span>Last push: {formatDate(data.pushed_at, true)}</span>
 
 
                     <div className="pt-4">
