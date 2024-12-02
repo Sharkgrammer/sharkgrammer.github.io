@@ -30,7 +30,7 @@ function Mail({data}: { data: any }) {
                 <div className="flex-1"/>
 
                 <div className="h-full">
-                    <span className="w-20 text-gray-500">{formatDate(data.updated_at)}</span>
+                    <span className="w-20 text-gray-500">{formatDate(data.pushed_at)}</span>
                 </div>
 
                 <ArchiveBoxIcon className="mail-icon"/>
